@@ -1,0 +1,34 @@
+- web interface
+  => Better forms interface
+  => AJAX modify/select interface
+  => Think about permissions
+  => Create tournament & Match
+  => Display query results (views)
+- import/export
+
+DATABASE
+ - cache support
+   - Function to create a new cached game for a match
+     => State must be copied to apply new time limit
+ - re-write analysis views to support same agent
+ - fix populate_tournament to copy faketime and to obey break_test.
+
+SERVER
+ - cache support
+
+MORE STUFF
+ - perl client, dynamic link
+
+BUGS
+ - analysis views should not assume agents are different
+ - add_game_to_match, select_pending_match assume agents are different!
+ - perl, database, and library code with hard-coded ball counts
+
+PACKAGING
+ - Readme files and install instructions
+ - Database generation script (pool.sql)?
+ - Internal Documentation for library
+ - Document database
+ - Official rules
+ - Packaging makefile
+ - Website

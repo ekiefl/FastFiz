@@ -1,0 +1,10 @@
+DocumentRoot /home/YOUR_USER_NAME/FastFiz-0.2/www
+<Directory /home/YOUR_USER_NAME/FastFiz-0.2/www>
+	Options Indexes MultiViews +ExecCGI
+	AllowOverride All
+	Order allow,deny
+	allow from all
+</Directory>	
+
+AddType application/x-httpd-cgi .pl
+

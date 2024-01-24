@@ -1,0 +1,41 @@
+<html>
+<head>
+<title>Computational Pool System</title>
+<link rel="stylesheet" type="text/css" href="pool.css" />
+</head>
+<body>
+<p><a href="login.pl">Login/Logout</a></p>
+<h1>Documentation</h1>
+<ul>
+<li><a href="www-doc.html">Web interface</a></li>
+<li><a href="FastFiz/">Physics C++ library</a></li>
+<li><a href="api.html">XML-RPC API</a></li>
+<li><a href="database.html">Database internals</a></li>
+<li><a href="database.png">Database graph</a></li>
+</ul>
+<h1>View Log File</h1>
+<form method="post" action="/pool/upload.pl" enctype="multipart/form-data">
+<p><input type="file" name="upload"
+size="50" /> <input type="submit" value="View" /></p></form>
+</ul>
+<h1>List</h1>
+<ul>
+<li><a href="agent.pl">Agents</a></li>
+<li><a href="tournament.pl">Tournaments</a></li>
+<li><a href="match.pl">Matches</a></li>
+<li><a href="user.pl">Users</a></li>
+<li><a href="game.pl">Games</a></li>
+<li><a href="shot.pl">Shots</a></li>
+<li><a href="state.pl">States</a></li>
+<li><a href="noise.pl">Noise</a></li>
+</ul>
+<h1>Add</h1>
+<ul>
+<!--li><a href="agent.pl?agentid=new">Agent</a></li-->
+<li><a href="tournament.pl?tournamentid=new">Tournament</a></li>
+<li><a href="match.pl?matchid=new">Match</a></li>
+<li><a href="noise.pl?noiseid=new">Noise</a></li>
+</ul>
+
+</body>
+</html>

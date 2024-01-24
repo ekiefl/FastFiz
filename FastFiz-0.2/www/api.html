@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>Pool XMLRPC API documentation</title>
+		<meta name="author" content="Alon Altman" />
+		<meta name="generator" content="screem 0.16.1" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+		<meta http-equiv="Content-Script-Type" content="text/javascript" />
+		<meta http-equiv="Content-Style-Type" content="text/css" />
+		<link rel="stylesheet" type="text/css" href="./pool.css" />
+	</head>
+	<body>
+		<h1>Pool XMLRPC API documentation</h1>
+		<p>The pool competition and physics server includes a web service API
+		based on <a href="http://www.xmlrpc.com/" >XML-RPC</a>. This
+		API document assumes the user is familiar with XML-RPC, and proceeds
+		to list the supported methods.</p>
+		<p>The XML-RPC endpoint for all methods is api.pl in the directory where
+		the web interface (and this document) is installed</p>
+		<h2>Agent API</h2>
+		<p>These methods allow agents to request tasks and submit shots.
+		The supplied client will use these methods to communicate with the server.</p>
+		<h3>register_agent</h3>
+		<p>Submit agent to server and get ID.</p>
+		<p><b>Parameters:</b> Agent Name (string), Configuration file name (string),
+		Agent password (string), Agent Owner ID (integer).</p>
+		<p><b>Returns:</b> Agent ID (integer)</p>
+		<p>This function allows an agent to register with the server and know its agent ID.
+		If a matching agent does not exist, a new one will be created under the ownership
+		of the specified owner (use 0 for no owner).
+		</p><p>
+		If the agent does exist but the password is incorrect "Bad Password" will be returned.
+		</p>
+		<h3>get_shot</h3>
+		<p>Get a table state requiring a shot for specified agent.</p>
+		<p><b>Parameters:</b> Agent ID (integer), Agent Password (string)</p>
+		<p><b>Returns:</b> Structure with the following fields:</p>
+		<dl><dt>shot_available</dt><dd>(boolean) True iff a new game state
+		requiring a shot is available. This shot is now assigned to the client.</dd>
+		<dt>gameid</dt><dd>(integer) Identifier of the game for which the shot is required.
+		Should be sent back to the server with the shot parameters. </dd>
+		<dt>stateid</dt><dd>(integer) Identifier of the game state for which the shot is required.
+		Should be sent back to the server with the shot parameters. </dd>
+		<dt>state_info</dt><dd>(string) Full information about the current game and table
+		state, encoded appropriately for GameState::Factory. </dd>
+		<dt>noise_info</dt><dd>(string) Full information about the noise to be added, 
+		encoded appropriately for Noise::Factory. </dd>
+		</dl>
+		<h3>submit_shot</h3>
+		<p>Submit shot for a previously assigned game state to the server.</p>
+		<p><b>Parameters:</b> Game ID (integer), Agent ID (integer), Password (string),
+		State ID (integer), a,b,theta,phi,v,cue_x,cue_y (double), Called Ball (integer), 
+		Called Pocket (integer), Decision (integer), Time spent in seconds (double).</p>
+		<p><b>Returns:</b> true (boolean) if the shot was submitted successfully, and an
+		error string otherwise.</p>
+		<p>The server will process the shot. No indication of success or failure of the
+		shot itself is returned to the client. If the client has kept its turn, it <i>may</i>,
+		but not always, get the next state in the game using a subsequent call to get_shot.
+		Game history is currently not directly available  
+		The "Time spent" parameter is ignored unless the server is set to trust
+		the clients' time usage (in case of "fake time").</p>
+		<h2>Database access API</h2>
+		<p>These methods allow clients to access the database and physics 
+		library. Most methods require user authentication via cookies or by appending
+		?username=USER&amp;password=PASS to the script URL.</p>
+		<h3>getgame</h3>
+		<p>Returns a detailed log of a game including XML encoded states and shots.</p>
+		<p><b>Parameters:</b> Game ID (string) -- this could begin with G
+		to mark a game, S to mark a shot, or L to mark uploaded logfile.</p>
+		<p><b>Returns: </b> Array of shot structures with detailed information 
+		about table state and shot.</p>
+		<h3>coltitle</h3>
+		<p>Returns a string representing the title for a column in the database by column name</p>
+		<h3>coltext</h3>
+		<p>Given a column name and value from that column, returns human-readable text
+		for that value.</p>
+		<h3>execshot</h3>
+		<p>Given a table state and shot parameters, returns the event list
+		from executing that shot. Used by the JavaScript game viewer.</p>
+		<h2>Debugging methods</h2>
+		<h3>gettestgame</h3>
+		<p>Returns similar to getgame but requires no arguments.</p>
+		<h3>testshot</h3>
+		<p>Returns similar to execshot but requires no arguments.</p>
+		<h3>dump</h3>
+		<p>Returns a string representation of the concatenation of its arguments</p>		
+	</body>
+</html>

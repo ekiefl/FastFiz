@@ -1,0 +1,56 @@
+/** Add css rules here for your application. */
+
+.gwt-SliderBar-shell {
+  border: 2px solid #faf9f7;
+  border-right: 2px solid #848280;
+  border-bottom: 2px solid #848280;
+  border-left: 2px solid #848280;
+  border-top: 2px solid #848280;
+  background-color: #efebe7;
+  width: 50%;
+}
+.gwt-SliderBar-shell .gwt-SliderBar-line {
+  border: 1px solid green;
+  background-color: white;
+  height: 4px;
+  width: 98%;
+  top: 5pt;
+  overflow: hidden;
+}
+.gwt-SliderBar-shell .gwt-SliderBar-knob {
+  top: 7pt;
+  width: 11px;
+  height: 15px;
+  z-index: 1;
+  cursor: pointer;
+}
+.gwt-SliderBar-shell .gwt-SliderBar-tick {
+  top: 12pt;
+  width: 1px;
+  height: 8pt;
+  background: black;
+  overflow: hidden;
+}
+
+
+
+.gwt-SliderBar-shell .gwt-SliderBar-label {
+  top: 2pt;
+  font-size: 8pt;
+  cursor: default;
+}
+.gwt-SliderBar-shell-focused {
+}
+.gwt-SliderBar-shell .gwt-SliderBar-line-sliding {
+  background-color: #DDDDDD;
+  cursor: pointer;
+}
+
+.gwt-AbsolutePanel {
+   background-color: #14B856;
+ }
+
+serverResponseLabelError {
+  color: red;
+}
+

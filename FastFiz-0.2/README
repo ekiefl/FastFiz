@@ -1,0 +1,127 @@
+Computational Pool Framework Version 0.2
+
+Licensed under the GNU LGPL.
+Released by: Stanford University
+For information contact Alon Altman <epsalon@stanford.edu>
+
+INTRODUCTION
+
+The computational pool framework is built upon a client/server model. Pool
+AIs run as clients and connect to a pool server via XMLRPC, using the HTTP
+protocol to access the web server. The pool web server also provides a user
+interface for viewing and modifying games and matches, and starting
+experiments and tournaments. The server code is available under the www/
+directory.
+
+The main pool library is in the FastFiz directory, and includes bindings for
+perl and python. The FastFiz library is comprised of two main modules
+FastFiz (implementing the physics of a pool table) and Rules (implementing
+the rules of 8-ball and other pool games), several utility modules (Noise
+and Stopwatch) and a base class for implementing pool AIs (AIBase). Detailed
+documentation of the library is available under FastFiz/doc (once compiled)
+and online at http://altman.stanford.edu/pool/FastFiz/
+
+Example code using the library (but not the agent infrastructure) is available
+in the example/ directory.
+
+General code for a pool agent (or client) is in the client/ directory. The
+Makefile builds the client based on the AI library in the AI/ directory.
+This is the code that needs to be edited in order to implement your agent.
+Simply modify AI.cpp and AI.h to include your agent code and add other *.cpp
+and *.h files as needed.
+
+The client code is designed to work with libconfig, a library allowing for
+run-time configuration of the agent. The AI class has a protected member
+_config which gives access to the configuration information, and the client
+uses some of the configuration parameters as defaults. See
+http://www.hyperrealm.com/libconfig/libconfig_manual.html for more
+information.
+
+All information on the server side is kept in a postgresql database
+(documented below). Permissions are handled by the web server: Each agent
+has a password assigned for use by the client. Also, each agent, match, and
+tournament could be owned by a user. All web access requires a user login.
+Users with admin access have full control over the server, while users
+without it can only see and edit information related to their agents and
+matches.
+
+The server includes an interactive game player written using GWT (Google web
+toolkit). This allows writing a full web application in Java and compiling
+it to JavaScript. The compiled JavaScript code is in the www/gwt directory,
+while the source code is in the gwt-src/ directory. This game player could be
+accessed using the web interface.
+
+PREREQUISITES (version tested in parenthesis)
+- postgresql (8.3)
+- perl (5.10)
+- GNU scientific library (1.11)
+- python (2.5.2)
+- swig (1.3.35)
+- g++ (4.3.2)
+- apache2
+- doxygen (1.5.6)
+- xmlrpc-c3 (1.06.27)
+- perl modules:
+  - DBI
+  - DBD::Pg
+  - CGI::Ajax
+  - URI::Escape
+  - Data::Dumper
+  - XMLRPC::Lite
+
+INSTALLATION
+In order to install the server code, we recommend a Linux system. We have
+designed and run the system on Ubuntu Linux 8.10, and later versions should
+work as well. The instructions below have been tested on Ubuntu Linux 10.04
+LTS.
+
+To prepare your system for installation, first use the following command to
+install many required packages:
+
+sudo apt-get install cvs libgsl0-dev  postgresql \
+postgresql-client postgresql-contrib python-dev python-pgsql perl \
+libcgi-ajax-perl libdbd-pg-perl libdbi-perl libgd-gd2-noxpm-perl \
+apache2 doxygen swig build-essential libxmlrpc-c3-dev \
+libhtml-template-perl graphviz libcurl4-gnutls-dev libsoap-lite-perl \
+libcgi-pm-perl
+
+After all packages are installed, build the library and examples:
+make -C FastFiz && make -C example && make -C AI && make -C client
+
+At this point you have all you need to write a pool client using our
+(remote) server.
+
+INSTALLING A LOCAL SERVER
+
+In order to have the web server accessible to run games and to use the web
+user interface, you must set up Apache to forward a certain directory or
+virtual host to the www directory on the server. Specifically, you must
+enable the ExecCGI and FollowSymLinks options and add a handler for .pl
+files. See the apache-config file in this directory for an example.
+
+Next, you must create the postgresql database and "pool" user. This could be
+done manually or using "make" in the database directory. If you wish to use
+a database/user name other than "pool" edit config.mk. The Makefile assumes
+the user has sudo permissions to the postgres user. You may also manually
+create the database (and user). In that case, use pool-schema.sql to
+initialize the database and edit config.mk appropriately. Note: config.mk is
+used by the www perl scripts to access the database!
+
+Once the web server and database are installed, you may access the local
+server using by browsing to http://localhost (or any other custom URL you
+have configured). The default username and password is "admin". This may be
+changed using the "List Users" function. For more information about the web
+interface, see the online documentation.
+
+CREDITS
+This package includes modified or unmodified GPL/LGPL code from the following 
+sources:
+ - PostgreSQL Autodoc 1.40 by Rod Taylor (http://www.rbt.ca/autodoc/).
+ - libconfig 1.3 by Mark Lindner, Daniel Marjam<E4>, and Glenn Herteg
+   (http://www.hyperrealm.com/libconfig/).
+ - wz_dragdrop 4.91 by Walter Zorn
+   (http://www.walterzorn.com/dragdrop/dragdrop_e.htm).
+ - Google web toolkit 2.0 (http://code.google.com/webtoolkit/)
+ - xmlrpc-gwt 1.1 by Fred Drake (http://code.google.com/p/xmlrpc-gwt/).
+ - gwt-incubator
+ - gwt-canvas

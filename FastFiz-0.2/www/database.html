@@ -1,0 +1,6300 @@
+<!-- $Header: /afs/cs/u/cja/.cvsroot/poolfiz/newserver/www/database.html,v 1.3 2010-04-27 16:50:46 alon Exp $ -->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+
+<html>
+  <head>
+    <title>Index for pool</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <style type="text/css">
+	BODY {
+		color:	#000000;
+		background-color: #FFFFFF;
+		font-family: Helvetica, sans-serif;
+	}
+
+	P {
+		margin-top: 5px;
+		margin-bottom: 5px;
+	}
+
+	P.w3ref {
+		font-size: 8pt;
+		font-style: italic;
+		text-align: right;
+	}
+
+	P.detail {
+		font-size: 10pt;
+	}
+
+	.error {
+		color: #FFFFFF;
+		background-color: #FF0000;
+	}
+
+	H1, H2, H3, H4, H5, H6 {
+	}
+
+	OL {
+		list-style-type: upper-alpha;
+	}
+
+	UL.topic {
+		list-style-type: upper-alpha;
+	}
+
+	LI.topic {
+		font-weight : bold;
+	}
+
+	HR {
+		color: #00FF00;
+		background-color: #808080;
+	}
+
+	TABLE {
+		border-width: medium;
+		padding: 3px;
+		background-color: #000000;
+		width: 90%;
+	}
+
+	CAPTION {
+		text-transform: capitalize;
+		font-weight : bold;
+		font-size: 14pt;
+	}
+
+	TH {
+		color: #FFFFFF;
+		background-color: #000000;
+		text-align: left;
+	}
+
+	TR {
+		color: #000000;
+		background-color: #000000;
+		vertical-align: top;
+	}
+
+	TR.tr0 {
+		background-color: #F0F0F0;
+	}
+
+	TR.tr1 {
+		background-color: #D8D8D8;
+	}
+
+	TD {
+		font-size: 12pt;
+	}
+
+	TD.col0 {
+		font-weight : bold;
+		width: 20%;
+	}
+
+	TD.col1 {
+		font-style: italic;
+		width: 15%;
+	}
+
+	TD.col2 {
+		font-size: 12px;
+	}
+    </style>
+    <link rel="stylesheet" type="text/css" media="all" href="all.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="screen.css">
+    <link rel="stylesheet" type="text/css" media="print" href="print.css">
+    <meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+  </head>
+  <body>
+
+    <!-- Primary Index -->
+	<p><br><br>Dumped on 2010-04-27</p>
+<h1><a name="index">Index of database - pool</a></h1>
+<ul>
+    
+    <li>Tables</li>
+    <ul>
+    	<li><a href="#public.table.agents">agents</a></li><li><a href="#public.table.balls">balls</a></li><li><a href="#public.table.ballstates">ballstates</a></li><li><a href="#public.table.cache-use">cache_use</a></li><li><a href="#public.table.debug">debug</a></li><li><a href="#public.table.decisions">decisions</a></li><li><a href="#public.table.end-reasons">end_reasons</a></li><li><a href="#public.table.games">games</a></li><li><a href="#public.table.gametypes">gametypes</a></li><li><a href="#public.table.logfiles">logfiles</a></li><li><a href="#public.table.matches">matches</a></li><li><a href="#public.table.noise">noise</a></li><li><a href="#public.table.noisemeta">noisemeta</a></li><li><a href="#public.table.pendingshots">pendingshots</a></li><li><a href="#public.table.pockets">pockets</a></li><li><a href="#public.table.rules">rules</a></li><li><a href="#public.table.shots">shots</a></li><li><a href="#public.table.state-cache">state_cache</a></li><li><a href="#public.table.states">states</a></li><li><a href="#public.table.tablestates">tablestates</a></li><li><a href="#public.table.tournament-agents">tournament_agents</a></li><li><a href="#public.table.tournaments">tournaments</a></li><li><a href="#public.table.turntypes">turntypes</a></li><li><a href="#public.table.users">users</a></li>
+    </ul>
+    <li>Views</li>
+    <ul>
+    	<li><a href="#public.view.encoded-gamestates">encoded_gamestates</a></li><li><a href="#public.view.encoded-tablestates">encoded_tablestates</a></li><li><a href="#public.view.end-states">end_states</a></li><li><a href="#public.view.game-access">game_access</a></li><li><a href="#public.view.game-logfiles">game_logfiles</a></li><li><a href="#public.view.game-switchcount">game_switchcount</a></li><li><a href="#public.view.match-access">match_access</a></li><li><a href="#public.view.match-active-games">match_active_games</a></li><li><a href="#public.view.match-endtype-histogram">match_endtype_histogram</a></li><li><a href="#public.view.match-shot-analysis">match_shot_analysis</a></li><li><a href="#public.view.match-switch-histogram">match_switch_histogram</a></li><li><a href="#public.view.noise-access">noise_access</a></li><li><a href="#public.view.noise-sim-ballsleft-surface">noise_sim_ballsleft_surface</a></li><li><a href="#public.view.noise-sim-scatterplot">noise_sim_scatterplot</a></li><li><a href="#public.view.noise-strings">noise_strings</a></li><li><a href="#public.view.shot-access">shot_access</a></li><li><a href="#public.view.state-access">state_access</a></li><li><a href="#public.view.state-ball-counts">state_ball_counts</a></li>
+    </ul>
+    <li>Functions</li>
+    <ul>
+  	<li><a href="#public.function.add-game-to-match-start-state-integer-agentid-integer-matchid-integer">add_game_to_match(start_state integer, agentid integer, matchid integer)</a></li><li><a href="#public.function.add-game-to-match-special-start-state-integer-matchid-integer">add_game_to_match_special(start_state integer, matchid integer)</a></li><li><a href="#public.function.add-to-cache-stateid-integer-gameid-integer">add_to_cache(stateid integer, gameid integer)</a></li><li><a href="#public.function.clean-orphaned-states">clean_orphaned_states()</a></li><li><a href="#public.function.cleanup">cleanup()</a></li><li><a href="#public.function.cleanup-logfiles">cleanup_logfiles()</a></li><li><a href="#public.function.cleanup-pendingshots">cleanup_pendingshots()</a></li><li><a href="#public.function.concat-text">concat(text)</a></li><li><a href="#public.function.get-next-agent-integer-integer">get_next_agent(integer, integer)</a></li><li><a href="#public.function.get-noise-integer-integer">get_noise(integer, integer)</a></li><li><a href="#public.function.get-tablestate-stateid-integer">get_tablestate(stateid integer)</a></li><li><a href="#public.function.populate-tournament-tourid-integer">populate_tournament(tourid integer)</a></li><li><a href="#public.function.select-pending-match-agentids-integerARRAY">select_pending_match(agentids integer[])</a></li><li><a href="#public.function.select-pending-shot-integerARRAY">select_pending_shot(integer[])</a></li><li><a href="#public.function.set-tablestate-tablestate-integer-stateid-text">set_tablestate(tablestate integer, stateid text)</a></li>
+    </ul>
+    
+</ul>
+
+    <!-- Schema Creation -->
+    <!-- publicpublic -->
+
+		
+    
+        <hr>
+		<h2>Table:
+			<a name="public.table.agents">agents</a>
+		</h2>
+        
+         <p>Table identifying all AI agents with IDs, names, configuration files, password, and the user who owns the agent (if any).</p>
+        
+
+
+        <table width="100%" cellspacing="0" cellpadding="3">
+                <caption>agents Structure</caption>
+                <tr>
+                <th>F-Key</th>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Description</th>
+                </tr>
+            
+            <tr class="tr0">
+				<td>
+                
+                  
+                
+                </td>
+            	<td>agentid</td>
+            	<td>serial</td>
+                <td><i>
+				
+					PRIMARY KEY
+					
+
+					
+				
+
+				
+				
+				</i>
+				
+				</td>
+			 </tr>
+            
+            <tr class="tr1">
+				<td>
+                
+                  
+                
+                </td>
+            	<td>agentname</td>
+            	<td>character varying</td>
+                <td><i>
+				
+					
+
+					
+                       UNIQUE#1
+                    
+				
+
+				NOT NULL
+				
+				</i>
+				
+				</td>
+			 </tr>
+            
+            <tr class="tr0">
+				<td>
+                
+                  
+                
+                </td>
+            	<td>config</td>
+            	<td>character varying</td>
+                <td><i>
+				
+					
+
+					
+                       UNIQUE#1
+                    
+				
+
+				
+				
+				</i>
+				
+				</td>
+			 </tr>
+            
+            <tr class="tr1">
+				<td>
+                
+                </td>
+            	<td>passwd</td>
+            	<td>character varying</td>
+                <td><i>
+				
+
+				
+				
+				</i>
+				
+				</td>
+			 </tr>
+            
+            <tr class="tr0">
+				<td>
+                
+                  
+                  <a href="#public.table.users">users.userid</a>
+                  
+                
+                </td>
+            	<td>owner</td>
+            	<td>integer</td>
+                <td><i>
+				
+					
+
+					
+				
+
+				
+				
+				</i>
+				
+				</td>
+			 </tr>
+            
+        </table>
+
+        <!-- Inherits -->
+		
+
+		
+
+        <!-- Constraint List -->
+		
+
+        <!-- Foreign Key Discovery -->
+		
+			<p>Tables referencing this one via Foreign Key Constraints:</p>
+		
+			<ul>
+				<li><a href="#public.table.games">games</a></li>
+			</ul>
+		
+			<ul>
+				<li><a href="#public.table.matches">matches</a></li>
+			</ul>
+		
+			<ul>
+				<li><a href="#public.table.pendingshots">pendingshots</a></li>
+			</ul>
+		
+			<ul>
+				<li><a href="#public.table.shots">shots</a></li>
+			</ul>
+		
+			<ul>
+				<li><a href="#public.table.state-cache">state_cache</a></li>
+			</ul>
+		
+			<ul>
+				<li><a href="#public.table.tournament-agents">tournament_agents</a></li>
+			</ul>
+		
+			<ul>
+				<li><a href="#public.table.tournaments">tournaments</a></li>
+			</ul>
+		
+		
+
+    <!-- Indexes -->
+    
+       agents_agentname_index agentname
+    
+       agents_owner owner
+    
+
+	<!-- List off permissions -->
+	
+
+	<p>
+		<a href="#index">Index</a>
+    </p>
+
+
+        <hr>
+		<h2>Table:
+			<a name="public.table.balls">balls</a>
+		</h2>
+        
+         <p>Defines the allowed balls in a table state, and whether or not they are solid.</p>
+        
+
+
+        <table width="100%" cellspacing="0" cellpadding="3">
+                <caption>balls Structure</caption>
+                <tr>
+                <th>F-Key</th>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Description</th>
+                </tr>
+            
+            <tr class="tr0">
+				<td>
+                
+                  
+                
+                </td>
+            	<td>ball</td>
+            	<td>integer</td>
+                <td><i>
+				
+					PRIMARY KEY
+					
+
+					
+				
+
+				
+				
+				</i>
+				
+				</td>
+			 </tr>
+            
+            <tr class="tr1">
+				<td>
+                
+                </td>
+            	<td>solid</td>
+            	<td>boolean</td>
+                <td><i>
+				
+
+				
+				
+				</i>
+				<br><br>True if solid, false if striped, NULL for other balls (such as the eight ball).
+				</td>
+			 </tr>
+            
+        </table>
+
+        <!-- Inherits -->
+		
+
+		
+
+        <!-- Constraint List -->
+		
+
+        <!-- Foreign Key Discovery -->
+		
+			<p>Tables referencing this one via Foreign Key Constraints:</p>
+		
+			<ul>
+				<li><a href="#public.table.shots">shots</a></li>
+			</ul>
+		
+			<ul>
+				<li><a href="#public.table.tablestates">tablestates</a></li>
+			</ul>
+		
+		
+
+    <!-- Indexes -->
+    
+
+	<!-- List off permissions -->
+	
+
+	<p>
+		<a href="#index">Index</a>
+    </p>
+
+
+        <hr>
+		<h2>Table:
+			<a name="public.table.ballstates">ballstates</a>
+		</h2>
+        
+         <p>Physical states a ball can be in.
+Values in this table are compatible with the physics library and should not be changed.</p>
+        
+
+
+        <table width="100%" cellspacing="0" cellpadding="3">
+                <caption>ballstates Structure</caption>
+                <tr>
+                <th>F-Key</th>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Description</th>
+                </tr>
+            
+            <tr class="tr0">
+				<td>
+                
+                  
+                
+                </td>
+            	<td>status</td>
+            	<td>serial</td>
+                <td><i>
+				
+					PRIMARY KEY
+					
+
+					
+				
+
+				
+				
+				</i>
+				
+				</td>
+			 </tr>
+            
+            <tr class="tr1">
+				<td>
+                
+                </td>
+            	<td>on_table</td>
+            	<td>boolean</td>
+                <td><i>
+				
+
+				NOT NULL
+				
+				</i>
+				<br><br>True if the ball is physically on the table (i.e. in play and not pocketed).
+				</td>
+			 </tr>
+            
+            <tr class="tr0">
+				<td>
+                
+                </td>
+            	<td>in_game</td>
+            	<td>boolean</td>
+                <td><i>
+				
+
+				NOT NULL
+				
+				</i>
+				<br><br>True if the ball is used in the game, even though it might be in a pocket.
+				</td>
+			 </tr>
+            
+            <tr class="tr1">
+				<td>
+                
+                </td>
+            	<td>description</td>
+            	<td>character varying</td>
+                <td><i>
+				
+
+				NOT NULL
+				
+				</i>
+				<br><br>Human-readable description of the ball state.
+				</td>
+			 </tr>
+            
+            <tr class="tr0">
+				<td>
+                
+                </td>
+            	<td>moving</td>
+            	<td>boolean</td>
+                <td><i>
+				
+
+				NOT NULL
+				DEFAULT false
+				</i>
+				<br><br>True if the ball is in motion.
+				</td>
+			 </tr>
+            
+        </table>
+
+        <!-- Inherits -->
+		
+
+		
+
+        <!-- Constraint List -->
+		
+
+        <!-- Foreign Key Discovery -->
+		
+			<p>Tables referencing this one via Foreign Key Constraints:</p>
+		
+			<ul>
+				<li><a href="#public.table.tablestates">tablestates</a></li>
+			</ul>
+		
+		
+
+    <!-- Indexes -->
+    
+
+	<!-- List off permissions -->
+	
+
+	<p>
+		<a href="#index">Index</a>
+    </p>
+
+
+        <hr>
+		<h2>Table:
+			<a name="public.table.cache-use">cache_use</a>
+		</h2>
+        
+         <p>This table is currently not in use.
+
+It will be used for continuation matches to mark which cached states have been expanded to a full game.</p>
+        
+
+
+        <table width="100%" cellspacing="0" cellpadding="3">
+                <caption>cache_use Structure</caption>
+                <tr>
+                <th>F-Key</th>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Description</th>
+                </tr>
+            
+            <tr class="tr0">
+				<td>
+                
+                  
+                
+                  
+                  <a href="#public.table.state-cache">state_cache.stateid</a>
+                  
+                
+                </td>
+            	<td>stateid</td>
+            	<td>integer</td>
+                <td><i>
+				
+					PRIMARY KEY
+					
+
+					
+				
+					
+
+					
+				
+
+				
+				
+				</i>
+				
+				</td>
+			 </tr>
+            
+            <tr class="tr1">
+				<td>
+                
+                  
+                  <a href="#public.table.matches">matches.matchid</a>
+                  
+                
+                  
+                
+                </td>
+            	<td>matchid</td>
+            	<td>integer</td>
+                <td><i>
+				
+					
+
+					
+				
+					PRIMARY KEY
+					
+
+					
+				
+
+				
+				
+				</i>
+				
+				</td>
+			 </tr>
+            
+        </table>
+
+        <!-- Inherits -->
+		
+
+		
+
+        <!-- Constraint List -->
+		
+
+        <!-- Foreign Key Discovery -->
+		
+
+    <!-- Indexes -->
+    
+
+	<!-- List off permissions -->
+	
+
+	<p>
+		<a href="#index">Index</a>
+    </p>
+
+
+        <hr>
+		<h2>Table:
+			<a name="public.table.debug">debug</a>
+		</h2>
+        
+         <p>This table is not currently in use.
+
+It will be used to allow clients to add comments their shots as the shots are executed. Comments are of the form of key/value pairs, where the value may be a number (debug_value) or a string (debug_comment).</p>
+        
+
+
+        <table width="100%" cellspacing="0" cellpadding="3">
+                <caption>debug Structure</caption>
+                <tr>
+                <th>F-Key</th>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Description</th>
+                </tr>
+            
+            <tr class="tr0">
+				<td>
+                
+                  
+                
+                  
+                  <a href="#public.table.shots">shots.shotid</a>
+                  
+                
+                </td>
+            	<td>shotid</td>
+            	<td>integer</td>
+                <td><i>
+				
+					PRIMARY KEY
+					
+
+					
+				
+					
+
+					
+				
+
+				
+				
+				</i>
+				
+				</td>
+			 </tr>
+            
+            <tr class="tr1">
+				<td>
+                
+                  
+                
+                </td>
+            	<td>debug_key</td>
+            	<td>character varying</td>
+                <td><i>
+				
+					PRIMARY KEY
+					
+
+					
+				
+
+				
+				
+				</i>
+				
+				</td>
+			 </tr>
+            
+            <tr class="tr0">
+				<td>
+                
+                </td>
+            	<td>debug_value</td>
+            	<td>double precision</td>
+                <td><i>
+				
+
+				
+				
+				</i>
+				
+				</td>
+			 </tr>
+            
+            <tr class="tr1">
+				<td>
+                
+                </td>
+            	<td>debug_comment</td>
+            	<td>character varying</td>
+                <td><i>
+				
+
+				
+				
+				</i>
+				
+				</td>
+			 </tr>
+            
+        </table>
+
+        <!-- Inherits -->
+		
+
+		
+
+        <!-- Constraint List -->
+		
+
+        <!-- Foreign Key Discovery -->
+		
+
+    <!-- Indexes -->
+    
+
+	<!-- List off permissions -->
+	
+
+	<p>
+		<a href="#index">Index</a>
+    </p>
+
+
+        <hr>
+		<h2>Table:
+			<a name="public.table.decisions">decisions</a>
+		</h2>
+        
+         <p>This table lists the various decisions agents may make during a pool game.
+Values in this table are compatible with the physics library and should not be changed.</p>
+        
+
+
+        <table width="100%" cellspacing="0" cellpadding="3">
+                <caption>decisions Structure</caption>
+                <tr>
+                <th>F-Key</th>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Description</th>
+                </tr>
+            
+            <tr class="tr0">
+				<td>
+                
+                  
+                
+                </td>
+            	<td>decision</td>
+            	<td>serial</td>
+                <td><i>
+				
+					PRIMARY KEY
+					
+
+					
+				
+
+				
+				
+				</i>
+				
+				</td>
+			 </tr>
+            
+            <tr class="tr1">
+				<td>
+                
+                </td>
+            	<td>description</td>
+            	<td>character varying</td>
+                <td><i>
+				
+
+				
+				
+				</i>
+				
+				</td>
+			 </tr>
+            
+        </table>
+
+        <!-- Inherits -->
+		
+
+		
+
+        <!-- Constraint List -->
+		
+
+        <!-- Foreign Key Discovery -->
+		
+			<p>Tables referencing this one via Foreign Key Constraints:</p>
+		
+			<ul>
+				<li><a href="#public.table.shots">shots</a></li>
+			</ul>
+		
+		
+
+    <!-- Indexes -->
+    
+
+	<!-- List off permissions -->
+	
+
+	<p>
+		<a href="#index">Index</a>
+    </p>
+
+
+
+
+        <hr>
+		<h2>Table:
+			<a name="public.table.end-reasons">end_reasons</a>
+		</h2>
+        
+         <p>This table includes all reasons a pool game may end. Reasons 1 and 2 refer to games that have been played in full. 
+The reasons 3,4,5, and 6 refer to various problems in executing the game. 
+Reason 7 is for single-agent games that are only played till loss of turn.
+Reason 8 is when a client has explictly conceded the game.</p>
+        
+
+
+        <table width="100%" cellspacing="0" cellpadding="3">
+                <caption>end_reasons Structure</caption>
+                <tr>
+                <th>F-Key</th>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Description</th>
+                </tr>
+            
+            <tr class="tr0">
+				<td>
+                
+                  
+                
+                </td>
+            	<td>end_reason</td>
+            	<td>serial</td>
+                <td><i>
+				
+					PRIMARY KEY
+					
+
+					
+				
+
+				
+				
+				</i>
+				
+				</td>
+			 </tr>
+            
+            <tr class="tr1">
+				<td>
+                
+                </td>
+            	<td>description</td>
+            	<td>character varying</td>
+                <td><i>
+				
+
+				
+				
+				</i>
+				
+				</td>
+			 </tr>
+            
+            <tr class="tr0">
+				<td>
+                
+                </td>
+            	<td>use_in_scoring</td>
+            	<td>boolean</td>
+                <td><i>
+				
+
+				NOT NULL
+				DEFAULT true
+				</i>
+				<br><br>A true value in this column means that games that ended this way will be counted towards an agent&#39;s score in a tournament.
+				</td>
+			 </tr>
+            
+            <tr class="tr1">
+				<td>
+                
+                </td>
+            	<td>use_in_analysis</td>
+            	<td>boolean</td>
+                <td><i>
+				
+
+				NOT NULL
+				DEFAULT true
+				</i>
+				<br><br>A true value in this column means that games that ended this way will be counted when producing statistical information about a match.
+				</td>
+			 </tr>
+            
+        </table>
+
+        <!-- Inherits -->
+		
+
+		
+
+        <!-- Constraint List -->
+		
+
+        <!-- Foreign Key Discovery -->
+		
+			<p>Tables referencing this one via Foreign Key Constraints:</p>
+		
+			<ul>
+				<li><a href="#public.table.games">games</a></li>
+			</ul>
+		
+		
+
+    <!-- Indexes -->
+    
+
+	<!-- List off permissions -->
+	
+
+	<p>
+		<a href="#index">Index</a>
+    </p>
+
+
+
+
+
+
+        <hr>
+		<h2>Table:
+			<a name="public.table.games">games</a>
+		</h2>
+        
+         <p>This table includes a row for each pool game (i.e. sequence of shots from break to victory of one of the players). All games must be part of a match. To play a single game, create a match with only one game.</p>
+        
+
+
+        <table width="100%" cellspacing="0" cellpadding="3">
+                <caption>games Structure</caption>
+                <tr>
+                <th>F-Key</th>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Description</th>
+                </tr>
+            
+            <tr class="tr0">
+				<td>
+                
+                  
+                
+                </td>
+            	<td>gameid</td>
+            	<td>serial</td>
+                <td><i>
+				
+					PRIMARY KEY
+					
+
+					
+				
+
+				
+				
+				</i>
+				
+				</td>
+			 </tr>
+            
+            <tr class="tr1">
+				<td>
+                
+                  
+                  <a href="#public.table.matches">matches.matchid</a>
+                  
+                
+                </td>
+            	<td>matchid</td>
+            	<td>integer</td>
+                <td><i>
+				
+					
+
+					
+				
+
+				NOT NULL
+				
+				</i>
+				<br><br>Match this game is part of. Required.
+				</td>
+			 </tr>
+            
+            <tr class="tr0">
+				<td>
+                
+                  
+                  <a href="#public.table.gametypes">gametypes.gametype</a>
+                  
+                
+                </td>
+            	<td>gametype</td>
+            	<td>smallint</td>
+                <td><i>
+				
+					
+
+					
+				
+
+				NOT NULL
+				
+				</i>
+				
+				</td>
+			 </tr>
+            
+            <tr class="tr1">
+				<td>
+                
+                  
+                  <a href="#public.table.agents">agents.agentid</a>
+                  
+                
+                </td>
+            	<td>agentid1</td>
+            	<td>integer</td>
+                <td><i>
+				
+					
+
+					
+				
+
+				NOT NULL
+				
+				</i>
+				<br><br>Agent who plays first (breaks) in the game.
+				</td>
+			 </tr>
+            
+            <tr class="tr0">
+				<td>
+                
+                  
+                  <a href="#public.table.agents">agents.agentid</a>
+                  
+                
+                </td>
+            	<td>agentid2</td>
+            	<td>integer</td>
+                <td><i>
+				
+					
+
+					
+				
+
+				
+				
+				</i>
+				<br><br>Agent who does not break, may only be null for single-agent test games.
+				</td>
+			 </tr>
+            
+            <tr class="tr1">
+				<td>
+                
+                  
+                  <a href="#public.table.noise">noise.noiseid</a>
+                  
+                
+                </td>
+            	<td>noiseid1</td>
+            	<td>integer</td>
+                <td><i>
+				
+					
+
+					
+				
+
+				NOT NULL
+				
+				</i>
+				<br><br>Noise information for agent 1 as an index into the noise table.
+				</td>
+			 </tr>
+            
+            <tr class="tr0">
+				<td>
+                
+                  
+                  <a href="#public.table.noise">noise.noiseid</a>
+                  
+                
+                </td>
+            	<td>noiseid2</td>
+            	<td>integer</td>
+                <td><i>
+				
+					
+
+					
+				
+
+				
+				
+				</i>
+				<br><br>Noise information for agent 2 as an index into the noise table.
+				</td>
+			 </tr>
+            
+            <tr class="tr1">
+				<td>
+                
+                  
+                  <a href="#public.table.states">states.stateid</a>
+                  
+                
+                </td>
+            	<td>start_state</td>
+            	<td>integer</td>
+                <td><i>
+				
+					
+
+					
+				
+
+				NOT NULL
+				
+				</i>
+				<br><br>Initial state of the game, usually a racked state.
+				</td>
+			 </tr>
+            
+            <tr class="tr0">
+				<td>
+                
+                </td>
+            	<td>start_player_won</td>
+            	<td>boolean</td>
+                <td><i>
+				
+
+				
+				
+				</i>
+				<br><br>True if agent identified by agentid1 has won the game (either normally or due to a loss by other player). False if agentid2 has won. Null if the game has not yet ended.
+				</td>
+			 </tr>
+            
+            <tr class="tr1">
+				<td>
+                
+                  
+                  <a href="#public.table.end-reasons">end_reasons.end_reason</a>
+                  
+                
+                </td>
+            	<td>end_reason</td>
+            	<td>smallint</td>
+                <td><i>
+				
+					
+
+					
+				
+
+				
+				
+				</i>
+				<br><br>Reason game ended. Null if game has not yet ended.
+				</td>
+			 </tr>
+            
+        </table>
+
+        <!-- Inherits -->
+		
+
+		
+
+        <!-- Constraint List -->
+		
+
+        <!-- Foreign Key Discovery -->
+		
+			<p>Tables referencing this one via Foreign Key Constraints:</p>
+		
+			<ul>
+				<li><a href="#public.table.pendingshots">pendingshots</a></li>
+			</ul>
+		
+			<ul>
+				<li><a href="#public.table.shots">shots</a></li>
+			</ul>
+		
+		
+
+    <!-- Indexes -->
+    
+       fki_games_end_reason_fkey end_reason
+    
+       games_matchid_index matchid
+    
+       games_noiseid1 noiseid1
+    
+       games_noiseid2 noiseid2
+    
+       games_start_state start_state
+    
+
+	<!-- List off permissions -->
+	
+
+	<p>
+		<a href="#index">Index</a>
+    </p>
+
+
+        <hr>
+		<h2>Table:
+			<a name="public.table.gametypes">gametypes</a>
+		</h2>
+        
+         <p>Types of cue sports supported by the database.
+
+Currently only Eight Ball is supported.</p>
+        
+
+
+        <table width="100%" cellspacing="0" cellpadding="3">
+                <caption>gametypes Structure</caption>
+                <tr>
+                <th>F-Key</th>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Description</th>
+                </tr>
+            
+            <tr class="tr0">
+				<td>
+                
+                  
+                
+                </td>
+            	<td>gametype</td>
+            	<td>serial</td>
+                <td><i>
+				
+					PRIMARY KEY
+					
+
+					
+				
+
+				
+				
+				</i>
+				
+				</td>
+			 </tr>
+            
+            <tr class="tr1">
+				<td>
+                
+                </td>
+            	<td>description</td>
+            	<td>character varying</td>
+                <td><i>
+				
+
+				NOT NULL
+				
+				</i>
+				
+				</td>
+			 </tr>
+            
+        </table>
+
+        <!-- Inherits -->
+		
+
+		
+
+        <!-- Constraint List -->
+		
+
+        <!-- Foreign Key Discovery -->
+		
+			<p>Tables referencing this one via Foreign Key Constraints:</p>
+		
+			<ul>
+				<li><a href="#public.table.games">games</a></li>
+			</ul>
+		
+			<ul>
+				<li><a href="#public.table.matches">matches</a></li>
+			</ul>
+		
+			<ul>
+				<li><a href="#public.table.states">states</a></li>
+			</ul>
+		
+			<ul>
+				<li><a href="#public.table.tournaments">tournaments</a></li>
+			</ul>
+		
+		
+
+    <!-- Indexes -->
+    
+
+	<!-- List off permissions -->
+	
+
+	<p>
+		<a href="#index">Index</a>
+    </p>
+
+
+        <hr>
+		<h2>Table:
+			<a name="public.table.logfiles">logfiles</a>
+		</h2>
+        
+         <p>This table supports the &quot;view log&quot; upload feature. When a log file is uploaded it will be added verbatim as a row to this table, and a secret identifier is assigned.
+
+The function cleanup_logfiles() should be called preiodically to remove expired files.</p>
+        
+
+
+        <table width="100%" cellspacing="0" cellpadding="3">
+                <caption>logfiles Structure</caption>
+                <tr>
+                <th>F-Key</th>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Description</th>
+                </tr>
+            
+            <tr class="tr0">
+				<td>
+                
+                  
+                
+                </td>
+            	<td>logid</td>
+            	<td>serial</td>
+                <td><i>
+				
+					PRIMARY KEY
+					
+
+					
+				
+
+				
+				
+				</i>
+				
+				</td>
+			 </tr>
+            
+            <tr class="tr1">
+				<td>
+                
+                </td>
+            	<td>logdata</td>
+            	<td>text</td>
+                <td><i>
+				
+
+				NOT NULL
+				
+				</i>
+				
+				</td>
+			 </tr>
+            
+            <tr class="tr0">
+				<td>
+                
+                </td>
+            	<td>secret</td>
+            	<td>integer</td>
+                <td><i>
+				
+
+				NOT NULL
+				
+				</i>
+				
+				</td>
+			 </tr>
+            
+            <tr class="tr1">
+				<td>
+                
+                </td>
+            	<td>expiration</td>
+            	<td>timestamp without time zone</td>
+                <td><i>
+				
+
+				NOT NULL
+				DEFAULT (now() + &#39;1 day&#39;::interval)
+				</i>
+				
+				</td>
+			 </tr>
+            
+        </table>
+
+        <!-- Inherits -->
+		
+
+		
+
+        <!-- Constraint List -->
+		
+
+        <!-- Foreign Key Discovery -->
+		
+
+    <!-- Indexes -->
+    
+       logfiles_expiration expiration
+    
+
+	<!-- List off permissions -->
+	
+
+	<p>
+		<a href="#index">Index</a>
+    </p>
+
+
+
+
+
+
+
+        <hr>
+		<h2>Table:
+			<a name="public.table.matches">matches</a>
+		</h2>
+        
+         <p>Matches are sets of one or more games between the same agents (or test games for a single agent), and can be added by the user. The matches table includes common information about the games within the match.</p>
+        
+
+
+        <table width="100%" cellspacing="0" cellpadding="3">
+                <caption>matches Structure</caption>
+                <tr>
+                <th>F-Key</th>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Description</th>
+                </tr>
+            
+            <tr class="tr0">
+				<td>
+                
+                  
+                
+                </td>
+            	<td>matchid</td>
+            	<td>serial</td>
+                <td><i>
+				
+					PRIMARY KEY
+					
+
+					
+				
+
+				
+				
+				</i>
+				
+				</td>
+			 </tr>
+            
+            <tr class="tr1">
+				<td>
+                
+                  
+                  <a href="#public.table.gametypes">gametypes.gametype</a>
+                  
+                
+                </td>
+            	<td>gametype</td>
+            	<td>smallint</td>
+                <td><i>
+				
+					
+
+					
+				
+
+				NOT NULL
+				
+				</i>
+				<br><br>Type of cue sport being played.
+				</td>
+			 </tr>
+            
+            <tr class="tr0">
+				<td>
+                
+                  
+                  <a href="#public.table.agents">agents.agentid</a>
+                  
+                
+                </td>
+            	<td>agentid1</td>
+            	<td>integer</td>
+                <td><i>
+				
+					
+
+					
+				
+
+				NOT NULL
+				
+				</i>
+				<br><br>First (or only) participant in the match.
+				</td>
+			 </tr>
+            
+            <tr class="tr1">
+				<td>
+                
+                  
+                  <a href="#public.table.agents">agents.agentid</a>
+                  
+                
+                </td>
+            	<td>agentid2</td>
+            	<td>integer</td>
+                <td><i>
+				
+					
+
+					
+				
+
+				
+				
+				</i>
+				<br><br>Second participant in the match (if any)
+				</td>
+			 </tr>
+            
+            <tr class="tr0">
+				<td>
+                
+                  
+                  <a href="#public.table.noise">noise.noiseid</a>
+                  
+                
+                </td>
+            	<td>noiseid1</td>
+            	<td>integer</td>
+                <td><i>
+				
+					
+
+					
+				
+
+				NOT NULL
+				
+				</i>
+				<br><br>Base noise for agent 1. For matches with variable noise, this could be modified by noisemetaid1.
+				</td>
+			 </tr>
+            
+            <tr class="tr1">
+				<td>
+                
+                  
+                  <a href="#public.table.noise">noise.noiseid</a>
+                  
+                
+                </td>
+            	<td>noiseid2</td>
+            	<td>integer</td>
+                <td><i>
+				
+					
+
+					
+				
+
+				
+				
+				</i>
+				<br><br>Base noise for agent 2. For matches with variable noise, this could be modified by noisemetaid1.
+				</td>
+			 </tr>
+            
+            <tr class="tr0">
+				<td>
+                
+                </td>
+            	<td>gamesleft1</td>
+            	<td>integer</td>
+                <td><i>
+				
+
+				NOT NULL
+				
+				</i>
+				<br><br>Number of games not yet started where agent 1 has to break. Setting this to a value greater than 0 may assign agent 1 a new game in the match.
+				</td>
+			 </tr>
+            
+            <tr class="tr1">
+				<td>
+                
+                </td>
+            	<td>max_active_games</td>
+            	<td>integer</td>
+                <td><i>
+				
+
+				
+				
+				</i>
+				<br><br>Maximum number of incomplete games that are allowed to be resolved at once.
+				</td>
+			 </tr>
+            
+            <tr class="tr0">
+				<td>
+                
+                  
+                  <a href="#public.table.noisemeta">noisemeta.noisemetaid</a>
+                  
+                
+                </td>
+            	<td>noisemetaid1</td>
+            	<td>integer</td>
+                <td><i>
+				
+					
+
+					
+				
+
+				NOT NULL
+				
+				</i>
+				<br><br>Modification of noise values for variable noise for agent 1. Set to 0 for constant noise.
+				</td>
+			 </tr>
+            
+            <tr class="tr1">
+				<td>
+                
+                  
+                  <a href="#public.table.noisemeta">noisemeta.noisemetaid</a>
+                  
+                
+                </td>
+            	<td>noisemetaid2</td>
+            	<td>integer</td>
+                <td><i>
+				
+					
+
+					
+				
+
+				
+				
+				</i>
+				<br><br>Modification of noise values for variable noise for agent 2. Set to 0 for constant noise.
+				</td>
+			 </tr>
+            
+            <tr class="tr0">
+				<td>
+                
+                </td>
+            	<td>timelimit1</td>
+            	<td>interval</td>
+                <td><i>
+				
+
+				
+				
+				</i>
+				<br><br>Amount of time allotted per game for agent 1.
+				</td>
+			 </tr>
+            
+            <tr class="tr1">
+				<td>
+                
+                </td>
+            	<td>timelimit2</td>
+            	<td>interval</td>
+                <td><i>
+				
+
+				
+				
+				</i>
+				<br><br>Amount of time allotted per game for agent 2.
+				</td>
+			 </tr>
+            
+            <tr class="tr0">
+				<td>
+                
+                  
+                  <a href="#public.table.rules">rules.rulesid</a>
+                  
+                
+                </td>
+            	<td>rules</td>
+            	<td>smallint</td>
+                <td><i>
+				
+					
+
+					
+				
+
+				NOT NULL
+				DEFAULT 1
+				</i>
+				<br><br>Used to specify special rules for testing matches. Use 1 for normal rules.
+				</td>
+			 </tr>
+            
+            <tr class="tr1">
+				<td>
+                
+                  
+                  <a href="#public.table.tournaments">tournaments.tournamentid</a>
+                  
+                
+                </td>
+            	<td>tournamentid</td>
+            	<td>integer</td>
+                <td><i>
+				
+					
+
+					
+				
+
+				
+				
+				</i>
+				<br><br>If the match is part of a tournament, this is the identifier of the tournament
+				</td>
+			 </tr>
+            
+            <tr class="tr0">
+				<td>
+                
+                </td>
+            	<td>title</td>
+            	<td>character varying</td>
+                <td><i>
+				
+
+				
+				
+				</i>
+				<br><br>Human-readable title for the match.
+				</td>
+			 </tr>
+            
+            <tr class="tr1">
+				<td>
+                
+                </td>
+            	<td>priority</td>
+            	<td>integer</td>
+                <td><i>
+				
+
+				NOT NULL
+				
+				</i>
+				<br><br>Processing priority for games within this match. Matches with higher priority will always be processed before lower priority matches if they have any outstanding games or shots.
+				</td>
+			 </tr>
+            
+            <tr class="tr0">
+				<td>
+                
+                </td>
+            	<td>gamesleft2</td>
+            	<td>integer</td>
+                <td><i>
+				
+
+				NOT NULL
+				
+				</i>
+				<br><br>Number of games not yet started where agent 2 has to break. Setting this to a value greater than 0 may assign agent 2 a new game in the match.
+				</td>
+			 </tr>
+            
+            <tr class="tr1">
+				<td>
+                
+                </td>
+            	<td>faketime</td>
+            	<td>boolean</td>
+                <td><i>
+				
+
+				NOT NULL
+				DEFAULT false
+				</i>
+				<br><br>If true, the server will not measure time for the agents, but instead will trust time reports by the clients. Useful for running experiments.
+				</td>
+			 </tr>
+            
+            <tr class="tr0">
+				<td>
+                
+                  
+                  <a href="#public.table.users">users.userid</a>
+                  
+                
+                </td>
+            	<td>owner</td>
+            	<td>integer</td>
+                <td><i>
+				
+					
+
+					
+				
+
+				
+				
+				</i>
+				<br><br>User ID who owns the match and may adjust its settings and view all games within the match.
+				</td>
+			 </tr>
+            
+        </table>
+
+        <!-- Inherits -->
+		
+
+		
+
+        <!-- Constraint List -->
+		
+
+        <!-- Foreign Key Discovery -->
+		
+			<p>Tables referencing this one via Foreign Key Constraints:</p>
+		
+			<ul>
+				<li><a href="#public.table.cache-use">cache_use</a></li>
+			</ul>
+		
+			<ul>
+				<li><a href="#public.table.games">games</a></li>
+			</ul>
+		
+		
+
+    <!-- Indexes -->
+    
+
+	<!-- List off permissions -->
+	
+
+	<p>
+		<a href="#index">Index</a>
+    </p>
+
+
+        <hr>
+		<h2>Table:
+			<a name="public.table.noise">noise</a>
+		</h2>
+        
+         <p>This table identifies a noise information for a player.</p>
+        
+
+
+        <table width="100%" cellspacing="0" cellpadding="3">
+                <caption>noise Structure</caption>
+                <tr>
+                <th>F-Key</th>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Description</th>
+                </tr>
+            
+            <tr class="tr0">
+				<td>
+                
+                  
+                
+                </td>
+            	<td>noiseid</td>
+            	<td>serial</td>
+                <td><i>
+				
+					PRIMARY KEY
+					
+
+					
+				
+
+				
+				
+				</i>
+				
+				</td>
+			 </tr>
+            
+            <tr class="tr1">
+				<td>
+                
+                </td>
+            	<td>noisetype</td>
+            	<td>smallint</td>
+                <td><i>
+				
+
+				NOT NULL
+				
+				</i>
+				
+				</td>
+			 </tr>
+            
+            <tr class="tr0">
+				<td>
+                
+                </td>
+            	<td>n_a</td>
+            	<td>double precision</td>
+                <td><i>
+				
+
+				
+				
+				</i>
+				
+				</td>
+			 </tr>
+            
+            <tr class="tr1">
+				<td>
+                
+                </td>
+            	<td>n_b</td>
+            	<td>double precision</td>
+                <td><i>
+				
+
+				
+				
+				</i>
+				
+				</td>
+			 </tr>
+            
+            <tr class="tr0">
+				<td>
+                
+                </td>
+            	<td>n_phi</td>
+            	<td>double precision</td>
+                <td><i>
+				
+
+				
+				
+				</i>
+				
+				</td>
+			 </tr>
+            
+            <tr class="tr1">
+				<td>
+                
+                </td>
+            	<td>n_v</td>
+            	<td>double precision</td>
+                <td><i>
+				
+
+				
+				
+				</i>
+				
+				</td>
+			 </tr>
+            
+            <tr class="tr0">
+				<td>
+                
+                </td>
+            	<td>n_factor</td>
+            	<td>double precision</td>
+                <td><i>
+				
+
+				
+				
+				</i>
+				
+				</td>
+			 </tr>
+            
+            <tr class="tr1">
+				<td>
+                
+                </td>
+            	<td>known</td>
+            	<td>boolean</td>
+                <td><i>
+				
+
+				NOT NULL
+				DEFAULT true
+				</i>
+				<br><br>True if the agent is aware of their own noise.
+				</td>
+			 </tr>
+            
+            <tr class="tr0">
+				<td>
+                
+                </td>
+            	<td>known_opp</td>
+            	<td>boolean</td>
+                <td><i>
+				
+
+				NOT NULL
+				DEFAULT true
+				</i>
+				<br><br>True if the agent is aware of the opponent&#39;s noise.
+				</td>
+			 </tr>
+            
+            <tr class="tr1">
+				<td>
+                
+                  
+                  <a href="#public.table.noise">noise.noiseid</a>
+                  
+                
+                </td>
+            	<td>basenoiseid</td>
+            	<td>integer</td>
+                <td><i>
+				
+					
+
+					
+				
+
+				
+				
+				</i>
+				<br><br>If this noise value was generated based on a meta-noise, this identifies the original noise entry it was based on.
+				</td>
+			 </tr>
+            
+            <tr class="tr0">
+				<td>
+                
+                  
+                  <a href="#public.table.noisemeta">noisemeta.noisemetaid</a>
+                  
+                
+                </td>
+            	<td>noisemetaid</td>
+            	<td>integer</td>
+                <td><i>
+				
+					
+
+					
+				
+
+				
+				
+				</i>
+				<br><br>If this noise value was generated based on a meta-noise, this identifies the meta noise information.
+				</td>
+			 </tr>
+            
+            <tr class="tr1">
+				<td>
+                
+                </td>
+            	<td>n_theta</td>
+            	<td>double precision</td>
+                <td><i>
+				
+
+				
+				
+				</i>
+				
+				</td>
+			 </tr>
+            
+            <tr class="tr0">
+				<td>
+                
+                </td>
+            	<td>title</td>
+            	<td>character varying</td>
+                <td><i>
+				
+
+				
+				
+				</i>
+				<br><br>A human-readable representation of the noise.
+				</td>
+			 </tr>
+            
+            <tr class="tr1">
+				<td>
+                
+                  
+                  <a href="#public.table.users">users.userid</a>
+                  
+                
+                </td>
+            	<td>owner</td>
+            	<td>integer</td>
+                <td><i>
+				
+					
+
+					
+				
+
+				
+				
+				</i>
+				<br><br>User who owns this noise entry.
+				</td>
+			 </tr>
+            
+        </table>
+
+        <!-- Inherits -->
+		
+
+		
+
+        <!-- Constraint List -->
+		
+
+        <!-- Foreign Key Discovery -->
+		
+			<p>Tables referencing this one via Foreign Key Constraints:</p>
+		
+			<ul>
+				<li><a href="#public.table.games">games</a></li>
+			</ul>
+		
+			<ul>
+				<li><a href="#public.table.matches">matches</a></li>
+			</ul>
+		
+			<ul>
+				<li><a href="#public.table.noise">noise</a></li>
+			</ul>
+		
+			<ul>
+				<li><a href="#public.table.state-cache">state_cache</a></li>
+			</ul>
+		
+			<ul>
+				<li><a href="#public.table.tournament-agents">tournament_agents</a></li>
+			</ul>
+		
+		
+
+    <!-- Indexes -->
+    
+       fki_ basenoiseid
+    
+
+	<!-- List off permissions -->
+	
+
+	<p>
+		<a href="#index">Index</a>
+    </p>
+
+
+
+
+
+
+        <hr>
+		<h2>Table:
+			<a name="public.table.noisemeta">noisemeta</a>
+		</h2>
+        
+         <p>This table is designed to specify the changes to a base noise in order to generate a new noise that may vary from game to game within a match.
+
+Not in use.</p>
+        
+
+
+        <table width="100%" cellspacing="0" cellpadding="3">
+                <caption>noisemeta Structure</caption>
+                <tr>
+                <th>F-Key</th>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Description</th>
+                </tr>
+            
+            <tr class="tr0">
+				<td>
+                
+                  
+                
+                </td>
+            	<td>noisemetaid</td>
+            	<td>serial</td>
+                <td><i>
+				
+					PRIMARY KEY
+					
+
+					
+				
+
+				
+				
+				</i>
+				
+				</td>
+			 </tr>
+            
+            <tr class="tr1">
+				<td>
+                
+                </td>
+            	<td>metatype</td>
+            	<td>smallint</td>
+                <td><i>
+				
+
+				NOT NULL
+				
+				</i>
+				
+				</td>
+			 </tr>
+            
+            <tr class="tr0">
+				<td>
+                
+                </td>
+            	<td>n_a</td>
+            	<td>double precision</td>
+                <td><i>
+				
+
+				
+				
+				</i>
+				
+				</td>
+			 </tr>
+            
+            <tr class="tr1">
+				<td>
+                
+                </td>
+            	<td>n_b</td>
+            	<td>double precision</td>
+                <td><i>
+				
+
+				
+				
+				</i>
+				
+				</td>
+			 </tr>
+            
+            <tr class="tr0">
+				<td>
+                
+                </td>
+            	<td>n_theta</td>
+            	<td>double precision</td>
+                <td><i>
+				
+
+				
+				
+				</i>
+				
+				</td>
+			 </tr>
+            
+            <tr class="tr1">
+				<td>
+                
+                </td>
+            	<td>n_phi</td>
+            	<td>double precision</td>
+                <td><i>
+				
+
+				
+				
+				</i>
+				
+				</td>
+			 </tr>
+            
+            <tr class="tr0">
+				<td>
+                
+                </td>
+            	<td>n_v</td>
+            	<td>double precision</td>
+                <td><i>
+				
+
+				
+				
+				</i>
+				
+				</td>
+			 </tr>
+            
+            <tr class="tr1">
+				<td>
+                
+                </td>
+            	<td>n_factor</td>
+            	<td>double precision</td>
+                <td><i>
+				
+
+				
+				
+				</i>
+				
+				</td>
+			 </tr>
+            
+            <tr class="tr0">
+				<td>
+                
+                </td>
+            	<td>title</td>
+            	<td>character varying</td>
+                <td><i>
+				
+
+				
+				
+				</i>
+				
+				</td>
+			 </tr>
+            
+        </table>
+
+        <!-- Inherits -->
+		
+
+		
+
+        <!-- Constraint List -->
+		
+
+        <!-- Foreign Key Discovery -->
+		
+			<p>Tables referencing this one via Foreign Key Constraints:</p>
+		
+			<ul>
+				<li><a href="#public.table.matches">matches</a></li>
+			</ul>
+		
+			<ul>
+				<li><a href="#public.table.noise">noise</a></li>
+			</ul>
+		
+			<ul>
+				<li><a href="#public.table.tournament-agents">tournament_agents</a></li>
+			</ul>
+		
+		
+
+    <!-- Indexes -->
+    
+
+	<!-- List off permissions -->
+	
+
+	<p>
+		<a href="#index">Index</a>
+    </p>
+
+
+        <hr>
+		<h2>Table:
+			<a name="public.table.pendingshots">pendingshots</a>
+		</h2>
+        
+         <p>This table identifies game states that require a shot from a client. If timesent is not NULL, this state is currently being processed by a client.</p>
+        
+
+
+        <table width="100%" cellspacing="0" cellpadding="3">
+                <caption>pendingshots Structure</caption>
+                <tr>
+                <th>F-Key</th>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Description</th>
+                </tr>
+            
+            <tr class="tr0">
+				<td>
+                
+                  
+                
+                  
+                  <a href="#public.table.states">states.stateid</a>
+                  
+                
+                </td>
+            	<td>stateid</td>
+            	<td>integer</td>
+                <td><i>
+				
+					PRIMARY KEY
+					
+
+					
+				
+					
+
+					
+				
+
+				
+				
+				</i>
+				
+				</td>
+			 </tr>
+            
+            <tr class="tr1">
+				<td>
+                
+                  
+                
+                  
+                  <a href="#public.table.games">games.gameid</a>
+                  
+                
+                  
+                
+                </td>
+            	<td>gameid</td>
+            	<td>integer</td>
+                <td><i>
+				
+					PRIMARY KEY
+					
+
+					
+				
+					
+
+					
+				
+					
+
+					
+                       UNIQUE
+                    
+				
+
+				
+				
+				</i>
+				
+				</td>
+			 </tr>
+            
+            <tr class="tr0">
+				<td>
+                
+                  
+                  <a href="#public.table.agents">agents.agentid</a>
+                  
+                
+                </td>
+            	<td>agentid</td>
+            	<td>integer</td>
+                <td><i>
+				
+					
+
+					
+				
+
+				NOT NULL
+				
+				</i>
+				
+				</td>
+			 </tr>
+            
+            <tr class="tr1">
+				<td>
+                
+                </td>
+            	<td>timesent</td>
+            	<td>timestamp with time zone</td>
+                <td><i>
+				
+
+				
+				
+				</i>
+				<br><br>Time when the agent started processing the shot. Used to calculate time spent and detect timeouts.
+				</td>
+			 </tr>
+            
+            <tr class="tr0">
+				<td>
+                
+                </td>
+            	<td>sent_to</td>
+            	<td>inet</td>
+                <td><i>
+				
+
+				
+				
+				</i>
+				<br><br>IP address of remote host processing the shot.
+				</td>
+			 </tr>
+            
+        </table>
+
+        <!-- Inherits -->
+		
+
+		
+
+        <!-- Constraint List -->
+		
+
+        <!-- Foreign Key Discovery -->
+		
+
+    <!-- Indexes -->
+    
+
+	<!-- List off permissions -->
+	
+
+	<p>
+		<a href="#index">Index</a>
+    </p>
+
+
+        <hr>
+		<h2>Table:
+			<a name="public.table.pockets">pockets</a>
+		</h2>
+        
+         <p>This table identifies pockets on the pool table.
+Values in this table are compatible with the physics library and should not be changed.</p>
+        
+
+
+        <table width="100%" cellspacing="0" cellpadding="3">
+                <caption>pockets Structure</caption>
+                <tr>
+                <th>F-Key</th>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Description</th>
+                </tr>
+            
+            <tr class="tr0">
+				<td>
+                
+                  
+                
+                </td>
+            	<td>pocket</td>
+            	<td>serial</td>
+                <td><i>
+				
+					PRIMARY KEY
+					
+
+					
+				
+
+				
+				
+				</i>
+				
+				</td>
+			 </tr>
+            
+            <tr class="tr1">
+				<td>
+                
+                </td>
+            	<td>description</td>
+            	<td>character varying</td>
+                <td><i>
+				
+
+				NOT NULL
+				
+				</i>
+				
+				</td>
+			 </tr>
+            
+        </table>
+
+        <!-- Inherits -->
+		
+
+		
+
+        <!-- Constraint List -->
+		
+
+        <!-- Foreign Key Discovery -->
+		
+			<p>Tables referencing this one via Foreign Key Constraints:</p>
+		
+			<ul>
+				<li><a href="#public.table.shots">shots</a></li>
+			</ul>
+		
+		
+
+    <!-- Indexes -->
+    
+
+	<!-- List off permissions -->
+	
+
+	<p>
+		<a href="#index">Index</a>
+    </p>
+
+
+        <hr>
+		<h2>Table:
+			<a name="public.table.rules">rules</a>
+		</h2>
+        
+         <p>This table specifies special rule modifications that may be used to run specialized test matches (such as a single-agent break test).</p>
+        
+
+
+        <table width="100%" cellspacing="0" cellpadding="3">
+                <caption>rules Structure</caption>
+                <tr>
+                <th>F-Key</th>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Description</th>
+                </tr>
+            
+            <tr class="tr0">
+				<td>
+                
+                  
+                
+                </td>
+            	<td>rulesid</td>
+            	<td>serial</td>
+                <td><i>
+				
+					PRIMARY KEY
+					
+
+					
+				
+
+				
+				
+				</i>
+				
+				</td>
+			 </tr>
+            
+            <tr class="tr1">
+				<td>
+                
+                </td>
+            	<td>description</td>
+            	<td>character varying</td>
+                <td><i>
+				
+
+				NOT NULL
+				
+				</i>
+				
+				</td>
+			 </tr>
+            
+        </table>
+
+        <!-- Inherits -->
+		
+
+		
+
+        <!-- Constraint List -->
+		
+
+        <!-- Foreign Key Discovery -->
+		
+			<p>Tables referencing this one via Foreign Key Constraints:</p>
+		
+			<ul>
+				<li><a href="#public.table.matches">matches</a></li>
+			</ul>
+		
+		
+
+    <!-- Indexes -->
+    
+
+	<!-- List off permissions -->
+	
+
+	<p>
+		<a href="#index">Index</a>
+    </p>
+
+
+
+        <hr>
+		<h2>Table:
+			<a name="public.table.shots">shots</a>
+		</h2>
+        
+         <p>This table includes all shots that have been processed by the server. Each shot is associated with a game and an agent, and transitions between two game states.
+Decision nodes are also modeled as shots, but with cue strike parameters absent.</p>
+        
+
+
+        <table width="100%" cellspacing="0" cellpadding="3">
+                <caption>shots Structure</caption>
+                <tr>
+                <th>F-Key</th>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Description</th>
+                </tr>
+            
+            <tr class="tr0">
+				<td>
+                
+                  
+                
+                </td>
+            	<td>shotid</td>
+            	<td>serial</td>
+                <td><i>
+				
+					PRIMARY KEY
+					
+
+					
+				
+
+				
+				
+				</i>
+				
+				</td>
+			 </tr>
+            
+            <tr class="tr1">
+				<td>
+                
+                  
+                  <a href="#public.table.games">games.gameid</a>
+                  
+                
+                </td>
+            	<td>gameid</td>
+            	<td>integer</td>
+                <td><i>
+				
+					
+
+					
+				
+
+				NOT NULL
+				
+				</i>
+				
+				</td>
+			 </tr>
+            
+            <tr class="tr0">
+				<td>
+                
+                  
+                  <a href="#public.table.agents">agents.agentid</a>
+                  
+                
+                </td>
+            	<td>agentid</td>
+            	<td>integer</td>
+                <td><i>
+				
+					
+
+					
+				
+
+				NOT NULL
+				
+				</i>
+				
+				</td>
+			 </tr>
+            
+            <tr class="tr1">
+				<td>
+                
+                  
+                  <a href="#public.table.states">states.stateid</a>
+                  
+                
+                </td>
+            	<td>prev_state</td>
+            	<td>integer</td>
+                <td><i>
+				
+					
+
+					
+				
+
+				NOT NULL
+				
+				</i>
+				
+				</td>
+			 </tr>
+            
+            <tr class="tr0">
+				<td>
+                
+                  
+                  <a href="#public.table.states">states.stateid</a>
+                  
+                
+                </td>
+            	<td>next_state</td>
+            	<td>integer</td>
+                <td><i>
+				
+					
+
+					
+				
+
+				NOT NULL
+				
+				</i>
+				
+				</td>
+			 </tr>
+            
+            <tr class="tr1">
+				<td>
+                
+                </td>
+            	<td>a</td>
+            	<td>double precision</td>
+                <td><i>
+				
+
+				
+				
+				</i>
+				
+				</td>
+			 </tr>
+            
+            <tr class="tr0">
+				<td>
+                
+                </td>
+            	<td>b</td>
+            	<td>double precision</td>
+                <td><i>
+				
+
+				
+				
+				</i>
+				
+				</td>
+			 </tr>
+            
+            <tr class="tr1">
+				<td>
+                
+                </td>
+            	<td>theta</td>
+            	<td>double precision</td>
+                <td><i>
+				
+
+				
+				
+				</i>
+				
+				</td>
+			 </tr>
+            
+            <tr class="tr0">
+				<td>
+                
+                </td>
+            	<td>phi</td>
+            	<td>double precision</td>
+                <td><i>
+				
+
+				
+				
+				</i>
+				
+				</td>
+			 </tr>
+            
+            <tr class="tr1">
+				<td>
+                
+                </td>
+            	<td>v</td>
+            	<td>double precision</td>
+                <td><i>
+				
+
+				
+				
+				</i>
+				
+				</td>
+			 </tr>
+            
+            <tr class="tr0">
+				<td>
+                
+                </td>
+            	<td>cue_x</td>
+            	<td>double precision</td>
+                <td><i>
+				
+
+				
+				
+				</i>
+				<br><br>X position of cue ball as given by AI. prev_state will not include this cue ball placement.
+				</td>
+			 </tr>
+            
+            <tr class="tr1">
+				<td>
+                
+                </td>
+            	<td>cue_y</td>
+            	<td>double precision</td>
+                <td><i>
+				
+
+				
+				
+				</i>
+				<br><br>Y position of cue ball as given by AI. prev_state will not include this cue ball placement.
+				</td>
+			 </tr>
+            
+            <tr class="tr0">
+				<td>
+                
+                  
+                  <a href="#public.table.balls">balls.ball</a>
+                  
+                
+                </td>
+            	<td>ball</td>
+            	<td>smallint</td>
+                <td><i>
+				
+					
+
+					
+				
+
+				
+				
+				</i>
+				<br><br>Called ball, NULL if not applicable.
+				</td>
+			 </tr>
+            
+            <tr class="tr1">
+				<td>
+                
+                  
+                  <a href="#public.table.pockets">pockets.pocket</a>
+                  
+                
+                </td>
+            	<td>pocket</td>
+            	<td>smallint</td>
+                <td><i>
+				
+					
+
+					
+				
+
+				
+				
+				</i>
+				<br><br>Called pocket, NULL if not applicable.
+				</td>
+			 </tr>
+            
+            <tr class="tr0">
+				<td>
+                
+                </td>
+            	<td>nl_a</td>
+            	<td>double precision</td>
+                <td><i>
+				
+
+				
+				
+				</i>
+				
+				</td>
+			 </tr>
+            
+            <tr class="tr1">
+				<td>
+                
+                </td>
+            	<td>nl_b</td>
+            	<td>double precision</td>
+                <td><i>
+				
+
+				
+				
+				</i>
+				
+				</td>
+			 </tr>
+            
+            <tr class="tr0">
+				<td>
+                
+                </td>
+            	<td>nl_theta</td>
+            	<td>double precision</td>
+                <td><i>
+				
+
+				
+				
+				</i>
+				
+				</td>
+			 </tr>
+            
+            <tr class="tr1">
+				<td>
+                
+                </td>
+            	<td>nl_phi</td>
+            	<td>double precision</td>
+                <td><i>
+				
+
+				
+				
+				</i>
+				
+				</td>
+			 </tr>
+            
+            <tr class="tr0">
+				<td>
+                
+                </td>
+            	<td>nl_v</td>
+            	<td>double precision</td>
+                <td><i>
+				
+
+				
+				
+				</i>
+				
+				</td>
+			 </tr>
+            
+            <tr class="tr1">
+				<td>
+                
+                  
+                  <a href="#public.table.decisions">decisions.decision</a>
+                  
+                
+                </td>
+            	<td>decision</td>
+            	<td>smallint</td>
+                <td><i>
+				
+					
+
+					
+				
+
+				
+				
+				</i>
+				<br><br>Decision made by the agent (NULL if not applicable).
+				</td>
+			 </tr>
+            
+            <tr class="tr0">
+				<td>
+                
+                </td>
+            	<td>timespent</td>
+            	<td>interval</td>
+                <td><i>
+				
+
+				NOT NULL
+				
+				</i>
+				<br><br>Time (either real or fake) spent by the agent executing the shot.
+				</td>
+			 </tr>
+            
+            <tr class="tr1">
+				<td>
+                
+                </td>
+            	<td>timedone</td>
+            	<td>timestamp with time zone</td>
+                <td><i>
+				
+
+				NOT NULL
+				DEFAULT now()
+				</i>
+				<br><br>Actual date and time the shot information was received.
+				</td>
+			 </tr>
+            
+            <tr class="tr0">
+				<td>
+                
+                </td>
+            	<td>duration</td>
+            	<td>double precision</td>
+                <td><i>
+				
+
+				
+				
+				</i>
+				<br><br>Amount of time, in simulation seconds, the shot executes on the table.
+This value is generated by the physics and is used in order to give the graphical frontend timing information to generate the scrollbar.
+				</td>
+			 </tr>
+            
+            <tr class="tr1">
+				<td>
+                
+                </td>
+            	<td>remote_ip</td>
+            	<td>inet</td>
+                <td><i>
+				
+
+				
+				
+				</i>
+				<br><br>IP address used by the client submitting the shot, if available.
+				</td>
+			 </tr>
+            
+        </table>
+
+        <!-- Inherits -->
+		
+
+		
+
+        <!-- Constraint List -->
+		
+
+        <!-- Foreign Key Discovery -->
+		
+			<p>Tables referencing this one via Foreign Key Constraints:</p>
+		
+			<ul>
+				<li><a href="#public.table.debug">debug</a></li>
+			</ul>
+		
+		
+
+    <!-- Indexes -->
+    
+       fki_shots_pocket pocket
+    
+       shots_gameid gameid
+    
+       shots_next_state next_state
+    
+       shots_prev_state prev_state
+    
+
+	<!-- List off permissions -->
+	
+
+	<p>
+		<a href="#index">Index</a>
+    </p>
+
+
+
+
+        <hr>
+		<h2>Table:
+			<a name="public.table.state-cache">state_cache</a>
+		</h2>
+        
+         <p>This table includes non-terminal states encountered by single-agent test matches. Data in this table can be used to run a continuation match based on previously cached states.
+
+Continuation matches are not yet implemented.</p>
+        
+
+
+        <table width="100%" cellspacing="0" cellpadding="3">
+                <caption>state_cache Structure</caption>
+                <tr>
+                <th>F-Key</th>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Description</th>
+                </tr>
+            
+            <tr class="tr0">
+				<td>
+                
+                  
+                  <a href="#public.table.agents">agents.agentid</a>
+                  
+                
+                  
+                
+                </td>
+            	<td>agentid</td>
+            	<td>integer</td>
+                <td><i>
+				
+					
+
+					
+				
+					PRIMARY KEY
+					
+
+					
+				
+
+				
+				
+				</i>
+				<br><br>ID of agent who broke.
+				</td>
+			 </tr>
+            
+            <tr class="tr1">
+				<td>
+                
+                  
+                  <a href="#public.table.noise">noise.noiseid</a>
+                  
+                
+                  
+                
+                </td>
+            	<td>noiseid</td>
+            	<td>integer</td>
+                <td><i>
+				
+					
+
+					
+				
+					PRIMARY KEY
+					
+
+					
+				
+
+				
+				
+				</i>
+				<br><br>Noise applied to the agent.
+				</td>
+			 </tr>
+            
+            <tr class="tr0">
+				<td>
+                
+                  
+                
+                </td>
+            	<td>timelimit</td>
+            	<td>interval</td>
+                <td><i>
+				
+					PRIMARY KEY
+					
+
+					
+				
+
+				
+				
+				</i>
+				<br><br>Amount of time agent had a the begining of the game. This is important as agents may behave differently with different time limits.
+				</td>
+			 </tr>
+            
+            <tr class="tr1">
+				<td>
+                
+                  
+                
+                  
+                  <a href="#public.table.states">states.stateid</a>
+                  
+                
+                  
+                
+                </td>
+            	<td>stateid</td>
+            	<td>integer</td>
+                <td><i>
+				
+					PRIMARY KEY
+					
+
+					
+				
+					
+
+					
+				
+					
+
+					
+                       UNIQUE
+                    
+				
+
+				
+				
+				</i>
+				<br><br>ID of the state after the agent has lost its turn.
+				</td>
+			 </tr>
+            
+        </table>
+
+        <!-- Inherits -->
+		
+
+		
+
+        <!-- Constraint List -->
+		
+
+        <!-- Foreign Key Discovery -->
+		
+			<p>Tables referencing this one via Foreign Key Constraints:</p>
+		
+			<ul>
+				<li><a href="#public.table.cache-use">cache_use</a></li>
+			</ul>
+		
+		
+
+    <!-- Indexes -->
+    
+
+	<!-- List off permissions -->
+	
+
+	<p>
+		<a href="#index">Index</a>
+    </p>
+
+
+        <hr>
+		<h2>Table:
+			<a name="public.table.states">states</a>
+		</h2>
+        
+         <p>This table details game states and corresponds to a GameState object in the physics library. The actual positions of the balls are specified in the tablestates table. This table includes information related to the state within a game.</p>
+        
+
+
+        <table width="100%" cellspacing="0" cellpadding="3">
+                <caption>states Structure</caption>
+                <tr>
+                <th>F-Key</th>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Description</th>
+                </tr>
+            
+            <tr class="tr0">
+				<td>
+                
+                  
+                
+                </td>
+            	<td>stateid</td>
+            	<td>serial</td>
+                <td><i>
+				
+					PRIMARY KEY
+					
+
+					
+				
+
+				
+				
+				</i>
+				
+				</td>
+			 </tr>
+            
+            <tr class="tr1">
+				<td>
+                
+                  
+                  <a href="#public.table.turntypes">turntypes.turntype</a>
+                  
+                
+                </td>
+            	<td>turntype</td>
+            	<td>smallint</td>
+                <td><i>
+				
+					
+
+					
+				
+
+				NOT NULL
+				
+				</i>
+				<br><br>Indicator of the game situation (such as normal shot, break, ball-in-hand).
+				</td>
+			 </tr>
+            
+            <tr class="tr0">
+				<td>
+                
+                </td>
+            	<td>cur_player_started</td>
+            	<td>boolean</td>
+                <td><i>
+				
+
+				NOT NULL
+				DEFAULT true
+				</i>
+				<br><br>true if the player who originally broke is the active player in this game state.
+				</td>
+			 </tr>
+            
+            <tr class="tr1">
+				<td>
+                
+                </td>
+            	<td>playing_solids</td>
+            	<td>boolean</td>
+                <td><i>
+				
+
+				
+				
+				</i>
+				<br><br>True if the active player in this state is supposed to sink the solid balls (in eight ball). False if the active player is playing stripes. Null if the table is open or solids/stripes are irrelevant for the game.
+				</td>
+			 </tr>
+            
+            <tr class="tr0">
+				<td>
+                
+                </td>
+            	<td>timeleft</td>
+            	<td>interval</td>
+                <td><i>
+				
+
+				
+				
+				</i>
+				<br><br>Amount of time left for the current player in the game. NULL if no time limit is specified.
+				</td>
+			 </tr>
+            
+            <tr class="tr1">
+				<td>
+                
+                </td>
+            	<td>timeleft_opp</td>
+            	<td>interval</td>
+                <td><i>
+				
+
+				
+				
+				</i>
+				<br><br>Amount of time left for the opponent in the game. NULL if no time limit is specified.
+				</td>
+			 </tr>
+            
+            <tr class="tr0">
+				<td>
+                
+                  
+                  <a href="#public.table.gametypes">gametypes.gametype</a>
+                  
+                
+                </td>
+            	<td>gametype</td>
+            	<td>smallint</td>
+                <td><i>
+				
+					
+
+					
+				
+
+				NOT NULL
+				
+				</i>
+				<br><br>Type of cue sport the state refers to.
+				</td>
+			 </tr>
+            
+        </table>
+
+        <!-- Inherits -->
+		
+
+		
+
+        <!-- Constraint List -->
+		
+
+        <!-- Foreign Key Discovery -->
+		
+			<p>Tables referencing this one via Foreign Key Constraints:</p>
+		
+			<ul>
+				<li><a href="#public.table.games">games</a></li>
+			</ul>
+		
+			<ul>
+				<li><a href="#public.table.pendingshots">pendingshots</a></li>
+			</ul>
+		
+			<ul>
+				<li><a href="#public.table.shots">shots</a></li>
+			</ul>
+		
+			<ul>
+				<li><a href="#public.table.state-cache">state_cache</a></li>
+			</ul>
+		
+			<ul>
+				<li><a href="#public.table.tablestates">tablestates</a></li>
+			</ul>
+		
+		
+
+    <!-- Indexes -->
+    
+
+	<!-- List off permissions -->
+	
+
+	<p>
+		<a href="#index">Index</a>
+    </p>
+
+
+        <hr>
+		<h2>Table:
+			<a name="public.table.tablestates">tablestates</a>
+		</h2>
+        
+         <p>This table complements the states table with the actual locations of balls on the table. Dynamic information (velocity and spin) is not recorded.</p>
+        
+
+
+        <table width="100%" cellspacing="0" cellpadding="3">
+                <caption>tablestates Structure</caption>
+                <tr>
+                <th>F-Key</th>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Description</th>
+                </tr>
+            
+            <tr class="tr0">
+				<td>
+                
+                  
+                
+                  
+                  <a href="#public.table.states">states.stateid</a>
+                  
+                
+                </td>
+            	<td>stateid</td>
+            	<td>integer</td>
+                <td><i>
+				
+					PRIMARY KEY
+					
+
+					
+				
+					
+
+					
+				
+
+				
+				
+				</i>
+				
+				</td>
+			 </tr>
+            
+            <tr class="tr1">
+				<td>
+                
+                  
+                  <a href="#public.table.balls">balls.ball</a>
+                  
+                
+                  
+                
+                </td>
+            	<td>ball</td>
+            	<td>smallint</td>
+                <td><i>
+				
+					
+
+					
+				
+					PRIMARY KEY
+					
+
+					
+				
+
+				
+				
+				</i>
+				
+				</td>
+			 </tr>
+            
+            <tr class="tr0">
+				<td>
+                
+                  
+                  <a href="#public.table.ballstates">ballstates.status</a>
+                  
+                
+                </td>
+            	<td>status</td>
+            	<td>smallint</td>
+                <td><i>
+				
+					
+
+					
+				
+
+				NOT NULL
+				
+				</i>
+				
+				</td>
+			 </tr>
+            
+            <tr class="tr1">
+				<td>
+                
+                </td>
+            	<td>x</td>
+            	<td>double precision</td>
+                <td><i>
+				
+
+				
+				
+				</i>
+				
+				</td>
+			 </tr>
+            
+            <tr class="tr0">
+				<td>
+                
+                </td>
+            	<td>y</td>
+            	<td>double precision</td>
+                <td><i>
+				
+
+				
+				
+				</i>
+				
+				</td>
+			 </tr>
+            
+        </table>
+
+        <!-- Inherits -->
+		
+
+		
+
+        <!-- Constraint List -->
+		
+
+        <!-- Foreign Key Discovery -->
+		
+
+    <!-- Indexes -->
+    
+       fki_status status
+    
+
+	<!-- List off permissions -->
+	
+
+	<p>
+		<a href="#index">Index</a>
+    </p>
+
+
+        <hr>
+		<h2>Table:
+			<a name="public.table.tournament-agents">tournament_agents</a>
+		</h2>
+        
+         <p>Assignment of agents to tournaments.</p>
+        
+
+
+        <table width="100%" cellspacing="0" cellpadding="3">
+                <caption>tournament_agents Structure</caption>
+                <tr>
+                <th>F-Key</th>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Description</th>
+                </tr>
+            
+            <tr class="tr0">
+				<td>
+                
+                  
+                
+                  
+                  <a href="#public.table.tournaments">tournaments.tournamentid</a>
+                  
+                
+                </td>
+            	<td>tournamentid</td>
+            	<td>integer</td>
+                <td><i>
+				
+					PRIMARY KEY
+					
+
+					
+				
+					
+
+					
+				
+
+				
+				
+				</i>
+				
+				</td>
+			 </tr>
+            
+            <tr class="tr1">
+				<td>
+                
+                  
+                  <a href="#public.table.agents">agents.agentid</a>
+                  
+                
+                  
+                
+                </td>
+            	<td>agentid</td>
+            	<td>integer</td>
+                <td><i>
+				
+					
+
+					
+				
+					PRIMARY KEY
+					
+
+					
+				
+
+				
+				
+				</i>
+				
+				</td>
+			 </tr>
+            
+            <tr class="tr0">
+				<td>
+                
+                  
+                
+                </td>
+            	<td>timelimit</td>
+            	<td>interval</td>
+                <td><i>
+				
+					PRIMARY KEY
+					
+
+					
+				
+
+				
+				
+				</i>
+				
+				</td>
+			 </tr>
+            
+            <tr class="tr1">
+				<td>
+                
+                  
+                  <a href="#public.table.noise">noise.noiseid</a>
+                  
+                
+                  
+                
+                </td>
+            	<td>noiseid</td>
+            	<td>integer</td>
+                <td><i>
+				
+					
+
+					
+				
+					PRIMARY KEY
+					
+
+					
+				
+
+				
+				
+				</i>
+				
+				</td>
+			 </tr>
+            
+            <tr class="tr0">
+				<td>
+                
+                  
+                  <a href="#public.table.noisemeta">noisemeta.noisemetaid</a>
+                  
+                
+                  
+                
+                </td>
+            	<td>noisemetaid</td>
+            	<td>integer</td>
+                <td><i>
+				
+					
+
+					
+				
+					PRIMARY KEY
+					
+
+					
+				
+
+				
+				
+				</i>
+				
+				</td>
+			 </tr>
+            
+        </table>
+
+        <!-- Inherits -->
+		
+
+		
+
+        <!-- Constraint List -->
+		
+
+        <!-- Foreign Key Discovery -->
+		
+
+    <!-- Indexes -->
+    
+
+	<!-- List off permissions -->
+	
+
+	<p>
+		<a href="#index">Index</a>
+    </p>
+
+
+        <hr>
+		<h2>Table:
+			<a name="public.table.tournaments">tournaments</a>
+		</h2>
+        
+         <p>Tournaments are series of matches with 2 or more agents where either (a) one agent plays all other agents, or (b) every two agents play each other. In case (a), the agent who plays all others is the master agent. In case (b), master_agent is null.
+
+After a tournament is set up, use populate_tournament() to create the relevant matches.</p>
+        
+
+
+        <table width="100%" cellspacing="0" cellpadding="3">
+                <caption>tournaments Structure</caption>
+                <tr>
+                <th>F-Key</th>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Description</th>
+                </tr>
+            
+            <tr class="tr0">
+				<td>
+                
+                  
+                
+                </td>
+            	<td>tournamentid</td>
+            	<td>serial</td>
+                <td><i>
+				
+					PRIMARY KEY
+					
+
+					
+				
+
+				
+				
+				</i>
+				
+				</td>
+			 </tr>
+            
+            <tr class="tr1">
+				<td>
+                
+                  
+                  <a href="#public.table.gametypes">gametypes.gametype</a>
+                  
+                
+                </td>
+            	<td>gametype</td>
+            	<td>integer</td>
+                <td><i>
+				
+					
+
+					
+				
+
+				NOT NULL
+				
+				</i>
+				<br><br>Type of cue sport being played
+				</td>
+			 </tr>
+            
+            <tr class="tr0">
+				<td>
+                
+                </td>
+            	<td>rules</td>
+            	<td>smallint</td>
+                <td><i>
+				
+
+				NOT NULL
+				
+				</i>
+				<br><br>Special rules, if needed
+				</td>
+			 </tr>
+            
+            <tr class="tr1">
+				<td>
+                
+                  
+                  <a href="#public.table.agents">agents.agentid</a>
+                  
+                
+                </td>
+            	<td>master_agent</td>
+            	<td>integer</td>
+                <td><i>
+				
+					
+
+					
+				
+
+				
+				
+				</i>
+				<br><br>If defined, only the master_agent will play all other agents. Otherwise, all agents will play all other agents.
+				</td>
+			 </tr>
+            
+            <tr class="tr0">
+				<td>
+                
+                </td>
+            	<td>title</td>
+            	<td>character varying</td>
+                <td><i>
+				
+
+				
+				
+				</i>
+				
+				</td>
+			 </tr>
+            
+            <tr class="tr1">
+				<td>
+                
+                </td>
+            	<td>priority</td>
+            	<td>integer</td>
+                <td><i>
+				
+
+				NOT NULL
+				
+				</i>
+				<br><br>Processing priority for games within this tournament. Matches with higher priority will always be processed before lower priority matches if they have any outstanding games or shots.
+				</td>
+			 </tr>
+            
+            <tr class="tr0">
+				<td>
+                
+                </td>
+            	<td>max_games</td>
+            	<td>integer</td>
+                <td><i>
+				
+
+				NOT NULL
+				
+				</i>
+				<br><br>Total number of games for each match within the tournament.
+				</td>
+			 </tr>
+            
+            <tr class="tr1">
+				<td>
+                
+                </td>
+            	<td>max_active_games</td>
+            	<td>integer</td>
+                <td><i>
+				
+
+				
+				
+				</i>
+				<br><br>Total number of games per match to be allowed to execute at once.
+				</td>
+			 </tr>
+            
+            <tr class="tr0">
+				<td>
+                
+                </td>
+            	<td>faketime</td>
+            	<td>boolean</td>
+                <td><i>
+				
+
+				NOT NULL
+				DEFAULT false
+				</i>
+				<br><br>If true, clients&#39; time spent reports will be trusted.
+				</td>
+			 </tr>
+            
+            <tr class="tr1">
+				<td>
+                
+                  
+                  <a href="#public.table.users">users.userid</a>
+                  
+                
+                </td>
+            	<td>owner</td>
+            	<td>integer</td>
+                <td><i>
+				
+					
+
+					
+				
+
+				
+				
+				</i>
+				
+				</td>
+			 </tr>
+            
+        </table>
+
+        <!-- Inherits -->
+		
+
+		
+
+        <!-- Constraint List -->
+		
+
+        <!-- Foreign Key Discovery -->
+		
+			<p>Tables referencing this one via Foreign Key Constraints:</p>
+		
+			<ul>
+				<li><a href="#public.table.matches">matches</a></li>
+			</ul>
+		
+			<ul>
+				<li><a href="#public.table.tournament-agents">tournament_agents</a></li>
+			</ul>
+		
+		
+
+    <!-- Indexes -->
+    
+
+	<!-- List off permissions -->
+	
+
+	<p>
+		<a href="#index">Index</a>
+    </p>
+
+
+        <hr>
+		<h2>Table:
+			<a name="public.table.turntypes">turntypes</a>
+		</h2>
+        
+         <p>This table identifies game situations in cue sports such as break or ball-in-hand.
+Values in this table are compatible with the physics library and should not be changed.</p>
+        
+
+
+        <table width="100%" cellspacing="0" cellpadding="3">
+                <caption>turntypes Structure</caption>
+                <tr>
+                <th>F-Key</th>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Description</th>
+                </tr>
+            
+            <tr class="tr0">
+				<td>
+                
+                  
+                
+                </td>
+            	<td>turntype</td>
+            	<td>serial</td>
+                <td><i>
+				
+					PRIMARY KEY
+					
+
+					
+				
+
+				
+				
+				</i>
+				
+				</td>
+			 </tr>
+            
+            <tr class="tr1">
+				<td>
+                
+                </td>
+            	<td>description</td>
+            	<td>character varying</td>
+                <td><i>
+				
+
+				NOT NULL
+				
+				</i>
+				
+				</td>
+			 </tr>
+            
+            <tr class="tr0">
+				<td>
+                
+                </td>
+            	<td>terminal</td>
+            	<td>boolean</td>
+                <td><i>
+				
+
+				NOT NULL
+				DEFAULT false
+				</i>
+				
+				</td>
+			 </tr>
+            
+            <tr class="tr1">
+				<td>
+                
+                </td>
+            	<td>posreqd</td>
+            	<td>boolean</td>
+                <td><i>
+				
+
+				NOT NULL
+				DEFAULT false
+				</i>
+				
+				</td>
+			 </tr>
+            
+            <tr class="tr0">
+				<td>
+                
+                </td>
+            	<td>decisionallowed</td>
+            	<td>boolean</td>
+                <td><i>
+				
+
+				NOT NULL
+				DEFAULT false
+				</i>
+				
+				</td>
+			 </tr>
+            
+            <tr class="tr1">
+				<td>
+                
+                </td>
+            	<td>shotreqd</td>
+            	<td>boolean</td>
+                <td><i>
+				
+
+				NOT NULL
+				DEFAULT true
+				</i>
+				
+				</td>
+			 </tr>
+            
+        </table>
+
+        <!-- Inherits -->
+		
+
+		
+
+        <!-- Constraint List -->
+		
+
+        <!-- Foreign Key Discovery -->
+		
+			<p>Tables referencing this one via Foreign Key Constraints:</p>
+		
+			<ul>
+				<li><a href="#public.table.states">states</a></li>
+			</ul>
+		
+		
+
+    <!-- Indexes -->
+    
+
+	<!-- List off permissions -->
+	
+
+	<p>
+		<a href="#index">Index</a>
+    </p>
+
+
+        <hr>
+		<h2>Table:
+			<a name="public.table.users">users</a>
+		</h2>
+        
+         <p>This table is part of the simple user permissions system employed for the web interface.
+Admin users have complete access to the database, while normal users can only modify objects they own, and may only view objects that are related to objects they own.</p>
+        
+
+
+        <table width="100%" cellspacing="0" cellpadding="3">
+                <caption>users Structure</caption>
+                <tr>
+                <th>F-Key</th>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Description</th>
+                </tr>
+            
+            <tr class="tr0">
+				<td>
+                
+                  
+                
+                </td>
+            	<td>userid</td>
+            	<td>serial</td>
+                <td><i>
+				
+					PRIMARY KEY
+					
+
+					
+				
+
+				
+				
+				</i>
+				
+				</td>
+			 </tr>
+            
+            <tr class="tr1">
+				<td>
+                
+                  
+                
+                </td>
+            	<td>username</td>
+            	<td>character varying</td>
+                <td><i>
+				
+					
+
+					
+                       UNIQUE
+                    
+				
+
+				NOT NULL
+				
+				</i>
+				
+				</td>
+			 </tr>
+            
+            <tr class="tr0">
+				<td>
+                
+                </td>
+            	<td>passwd</td>
+            	<td>character varying</td>
+                <td><i>
+				
+
+				NOT NULL
+				
+				</i>
+				
+				</td>
+			 </tr>
+            
+            <tr class="tr1">
+				<td>
+                
+                </td>
+            	<td>is_admin</td>
+            	<td>boolean</td>
+                <td><i>
+				
+
+				NOT NULL
+				DEFAULT false
+				</i>
+				
+				</td>
+			 </tr>
+            
+        </table>
+
+        <!-- Inherits -->
+		
+
+		
+
+        <!-- Constraint List -->
+		
+
+        <!-- Foreign Key Discovery -->
+		
+			<p>Tables referencing this one via Foreign Key Constraints:</p>
+		
+			<ul>
+				<li><a href="#public.table.agents">agents</a></li>
+			</ul>
+		
+			<ul>
+				<li><a href="#public.table.matches">matches</a></li>
+			</ul>
+		
+			<ul>
+				<li><a href="#public.table.noise">noise</a></li>
+			</ul>
+		
+			<ul>
+				<li><a href="#public.table.tournaments">tournaments</a></li>
+			</ul>
+		
+		
+
+    <!-- Indexes -->
+    
+
+	<!-- List off permissions -->
+	
+
+	<p>
+		<a href="#index">Index</a>
+    </p>
+
+
+
+
+    
+        <hr>
+		<h2>View:
+			<a name="public.view.encoded-gamestates">encoded_gamestates</a>
+		</h2>
+        
+         <p>Creates a Pool::GameState::Factory-compatible representation of all states.</p>
+        
+
+
+        <table width="100%" cellspacing="0" cellpadding="3">
+                <caption>encoded_gamestates Structure</caption>
+                <tr>
+                <th>F-Key</th>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Description</th>
+                </tr>
+            
+            <tr class="tr0">
+				<td>
+                
+                </td>
+            	<td>stateid</td>
+            	<td>integer</td>
+                <td><i>
+				
+
+				
+				
+				</i>
+				
+				</td>
+			 </tr>
+            
+            <tr class="tr1">
+				<td>
+                
+                </td>
+            	<td>gamestate</td>
+            	<td>text</td>
+                <td><i>
+				
+
+				
+				
+				</i>
+				
+				</td>
+			 </tr>
+            
+        </table>
+
+        <!-- Inherits -->
+		
+
+        <!-- Constraint List -->
+		
+
+        <!-- Foreign Key Discovery -->
+		
+
+    <!-- Indexes -->
+    
+
+	<!-- List off permissions -->
+	
+
+	<p>
+		<a href="#index">Index</a>
+    </p>
+
+        <hr>
+		<h2>View:
+			<a name="public.view.encoded-tablestates">encoded_tablestates</a>
+		</h2>
+        
+         <p>Creates a Pool::TableState-compatible representation of all states.</p>
+        
+
+
+        <table width="100%" cellspacing="0" cellpadding="3">
+                <caption>encoded_tablestates Structure</caption>
+                <tr>
+                <th>F-Key</th>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Description</th>
+                </tr>
+            
+            <tr class="tr0">
+				<td>
+                
+                </td>
+            	<td>stateid</td>
+            	<td>integer</td>
+                <td><i>
+				
+
+				
+				
+				</i>
+				
+				</td>
+			 </tr>
+            
+            <tr class="tr1">
+				<td>
+                
+                </td>
+            	<td>tablestate</td>
+            	<td>text</td>
+                <td><i>
+				
+
+				
+				
+				</i>
+				
+				</td>
+			 </tr>
+            
+        </table>
+
+        <!-- Inherits -->
+		
+
+        <!-- Constraint List -->
+		
+
+        <!-- Foreign Key Discovery -->
+		
+
+    <!-- Indexes -->
+    
+
+	<!-- List off permissions -->
+	
+
+	<p>
+		<a href="#index">Index</a>
+    </p>
+
+        <hr>
+		<h2>View:
+			<a name="public.view.end-states">end_states</a>
+		</h2>
+        
+         <p>Identifies the final positions of all games (whether completed or not).</p>
+        
+
+
+        <table width="100%" cellspacing="0" cellpadding="3">
+                <caption>end_states Structure</caption>
+                <tr>
+                <th>F-Key</th>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Description</th>
+                </tr>
+            
+            <tr class="tr0">
+				<td>
+                
+                </td>
+            	<td>gameid</td>
+            	<td>integer</td>
+                <td><i>
+				
+
+				
+				
+				</i>
+				
+				</td>
+			 </tr>
+            
+            <tr class="tr1">
+				<td>
+                
+                </td>
+            	<td>end_state</td>
+            	<td>integer</td>
+                <td><i>
+				
+
+				
+				
+				</i>
+				
+				</td>
+			 </tr>
+            
+        </table>
+
+        <!-- Inherits -->
+		
+
+        <!-- Constraint List -->
+		
+
+        <!-- Foreign Key Discovery -->
+		
+
+    <!-- Indexes -->
+    
+
+	<!-- List off permissions -->
+	
+
+	<p>
+		<a href="#index">Index</a>
+    </p>
+
+        <hr>
+		<h2>View:
+			<a name="public.view.game-access">game_access</a>
+		</h2>
+        
+
+
+        <table width="100%" cellspacing="0" cellpadding="3">
+                <caption>game_access Structure</caption>
+                <tr>
+                <th>F-Key</th>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Description</th>
+                </tr>
+            
+            <tr class="tr0">
+				<td>
+                
+                </td>
+            	<td>gameid</td>
+            	<td>integer</td>
+                <td><i>
+				
+
+				
+				
+				</i>
+				
+				</td>
+			 </tr>
+            
+            <tr class="tr1">
+				<td>
+                
+                </td>
+            	<td>userid</td>
+            	<td>integer</td>
+                <td><i>
+				
+
+				
+				
+				</i>
+				
+				</td>
+			 </tr>
+            
+        </table>
+
+        <!-- Inherits -->
+		
+
+        <!-- Constraint List -->
+		
+
+        <!-- Foreign Key Discovery -->
+		
+
+    <!-- Indexes -->
+    
+
+	<!-- List off permissions -->
+	
+
+	<p>
+		<a href="#index">Index</a>
+    </p>
+
+        <hr>
+		<h2>View:
+			<a name="public.view.game-logfiles">game_logfiles</a>
+		</h2>
+        
+         <p>Generates a LogReader compatible log file for each game.</p>
+        
+
+
+        <table width="100%" cellspacing="0" cellpadding="3">
+                <caption>game_logfiles Structure</caption>
+                <tr>
+                <th>F-Key</th>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Description</th>
+                </tr>
+            
+            <tr class="tr0">
+				<td>
+                
+                </td>
+            	<td>gameid</td>
+            	<td>integer</td>
+                <td><i>
+				
+
+				
+				
+				</i>
+				
+				</td>
+			 </tr>
+            
+            <tr class="tr1">
+				<td>
+                
+                </td>
+            	<td>logfile</td>
+            	<td>text</td>
+                <td><i>
+				
+
+				
+				
+				</i>
+				
+				</td>
+			 </tr>
+            
+        </table>
+
+        <!-- Inherits -->
+		
+
+        <!-- Constraint List -->
+		
+
+        <!-- Foreign Key Discovery -->
+		
+
+    <!-- Indexes -->
+    
+
+	<!-- List off permissions -->
+	
+
+	<p>
+		<a href="#index">Index</a>
+    </p>
+
+        <hr>
+		<h2>View:
+			<a name="public.view.game-switchcount">game_switchcount</a>
+		</h2>
+        
+         <p>Returns the number of times play has switched for each game that has ended without crashing.</p>
+        
+
+
+        <table width="100%" cellspacing="0" cellpadding="3">
+                <caption>game_switchcount Structure</caption>
+                <tr>
+                <th>F-Key</th>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Description</th>
+                </tr>
+            
+            <tr class="tr0">
+				<td>
+                
+                </td>
+            	<td>gameid</td>
+            	<td>integer</td>
+                <td><i>
+				
+
+				
+				
+				</i>
+				
+				</td>
+			 </tr>
+            
+            <tr class="tr1">
+				<td>
+                
+                </td>
+            	<td>agentid1</td>
+            	<td>integer</td>
+                <td><i>
+				
+
+				
+				
+				</i>
+				
+				</td>
+			 </tr>
+            
+            <tr class="tr0">
+				<td>
+                
+                </td>
+            	<td>matchid</td>
+            	<td>integer</td>
+                <td><i>
+				
+
+				
+				
+				</i>
+				
+				</td>
+			 </tr>
+            
+            <tr class="tr1">
+				<td>
+                
+                </td>
+            	<td>switches</td>
+            	<td>bigint</td>
+                <td><i>
+				
+
+				
+				
+				</i>
+				
+				</td>
+			 </tr>
+            
+        </table>
+
+        <!-- Inherits -->
+		
+
+        <!-- Constraint List -->
+		
+
+        <!-- Foreign Key Discovery -->
+		
+
+    <!-- Indexes -->
+    
+
+	<!-- List off permissions -->
+	
+
+	<p>
+		<a href="#index">Index</a>
+    </p>
+
+        <hr>
+		<h2>View:
+			<a name="public.view.match-access">match_access</a>
+		</h2>
+        
+
+
+        <table width="100%" cellspacing="0" cellpadding="3">
+                <caption>match_access Structure</caption>
+                <tr>
+                <th>F-Key</th>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Description</th>
+                </tr>
+            
+            <tr class="tr0">
+				<td>
+                
+                </td>
+            	<td>matchid</td>
+            	<td>integer</td>
+                <td><i>
+				
+
+				
+				
+				</i>
+				
+				</td>
+			 </tr>
+            
+            <tr class="tr1">
+				<td>
+                
+                </td>
+            	<td>userid</td>
+            	<td>integer</td>
+                <td><i>
+				
+
+				
+				
+				</i>
+				
+				</td>
+			 </tr>
+            
+        </table>
+
+        <!-- Inherits -->
+		
+
+        <!-- Constraint List -->
+		
+
+        <!-- Foreign Key Discovery -->
+		
+
+    <!-- Indexes -->
+    
+
+	<!-- List off permissions -->
+	
+
+	<p>
+		<a href="#index">Index</a>
+    </p>
+
+        <hr>
+		<h2>View:
+			<a name="public.view.match-active-games">match_active_games</a>
+		</h2>
+        
+         <p>Returns the number of games waiting for a shot in each match.</p>
+        
+
+
+        <table width="100%" cellspacing="0" cellpadding="3">
+                <caption>match_active_games Structure</caption>
+                <tr>
+                <th>F-Key</th>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Description</th>
+                </tr>
+            
+            <tr class="tr0">
+				<td>
+                
+                </td>
+            	<td>matchid</td>
+            	<td>integer</td>
+                <td><i>
+				
+
+				
+				
+				</i>
+				
+				</td>
+			 </tr>
+            
+            <tr class="tr1">
+				<td>
+                
+                </td>
+            	<td>count</td>
+            	<td>bigint</td>
+                <td><i>
+				
+
+				
+				
+				</i>
+				
+				</td>
+			 </tr>
+            
+        </table>
+
+        <!-- Inherits -->
+		
+
+        <!-- Constraint List -->
+		
+
+        <!-- Foreign Key Discovery -->
+		
+
+    <!-- Indexes -->
+    
+
+	<!-- List off permissions -->
+	
+
+	<p>
+		<a href="#index">Index</a>
+    </p>
+
+        <hr>
+		<h2>View:
+			<a name="public.view.match-endtype-histogram">match_endtype_histogram</a>
+		</h2>
+        
+         <p>For every match, counts the number of times each agent has caused each end reason to happen (wins are caused by the winner, all other end types are caused by the loser).</p>
+        
+
+
+        <table width="100%" cellspacing="0" cellpadding="3">
+                <caption>match_endtype_histogram Structure</caption>
+                <tr>
+                <th>F-Key</th>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Description</th>
+                </tr>
+            
+            <tr class="tr0">
+				<td>
+                
+                </td>
+            	<td>matchid</td>
+            	<td>integer</td>
+                <td><i>
+				
+
+				
+				
+				</i>
+				
+				</td>
+			 </tr>
+            
+            <tr class="tr1">
+				<td>
+                
+                </td>
+            	<td>agent</td>
+            	<td>integer</td>
+                <td><i>
+				
+
+				
+				
+				</i>
+				
+				</td>
+			 </tr>
+            
+            <tr class="tr0">
+				<td>
+                
+                </td>
+            	<td>end_reason</td>
+            	<td>smallint</td>
+                <td><i>
+				
+
+				
+				
+				</i>
+				
+				</td>
+			 </tr>
+            
+            <tr class="tr1">
+				<td>
+                
+                </td>
+            	<td>count</td>
+            	<td>bigint</td>
+                <td><i>
+				
+
+				
+				
+				</i>
+				
+				</td>
+			 </tr>
+            
+        </table>
+
+        <!-- Inherits -->
+		
+
+        <!-- Constraint List -->
+		
+
+        <!-- Foreign Key Discovery -->
+		
+
+    <!-- Indexes -->
+    
+
+	<!-- List off permissions -->
+	
+
+	<p>
+		<a href="#index">Index</a>
+    </p>
+
+        <hr>
+		<h2>View:
+			<a name="public.view.match-shot-analysis">match_shot_analysis</a>
+		</h2>
+        
+         <p>For each match, returns the number of times a shot by each agent has transitioned from one turn type to another with or without switching the active player.</p>
+        
+
+
+        <table width="100%" cellspacing="0" cellpadding="3">
+                <caption>match_shot_analysis Structure</caption>
+                <tr>
+                <th>F-Key</th>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Description</th>
+                </tr>
+            
+            <tr class="tr0">
+				<td>
+                
+                </td>
+            	<td>matchid</td>
+            	<td>integer</td>
+                <td><i>
+				
+
+				
+				
+				</i>
+				
+				</td>
+			 </tr>
+            
+            <tr class="tr1">
+				<td>
+                
+                </td>
+            	<td>agentid</td>
+            	<td>integer</td>
+                <td><i>
+				
+
+				
+				
+				</i>
+				
+				</td>
+			 </tr>
+            
+            <tr class="tr0">
+				<td>
+                
+                </td>
+            	<td>prevtt</td>
+            	<td>smallint</td>
+                <td><i>
+				
+
+				
+				
+				</i>
+				
+				</td>
+			 </tr>
+            
+            <tr class="tr1">
+				<td>
+                
+                </td>
+            	<td>posttt</td>
+            	<td>smallint</td>
+                <td><i>
+				
+
+				
+				
+				</i>
+				
+				</td>
+			 </tr>
+            
+            <tr class="tr0">
+				<td>
+                
+                </td>
+            	<td>switch</td>
+            	<td>boolean</td>
+                <td><i>
+				
+
+				
+				
+				</i>
+				
+				</td>
+			 </tr>
+            
+            <tr class="tr1">
+				<td>
+                
+                </td>
+            	<td>count</td>
+            	<td>bigint</td>
+                <td><i>
+				
+
+				
+				
+				</i>
+				
+				</td>
+			 </tr>
+            
+        </table>
+
+        <!-- Inherits -->
+		
+
+        <!-- Constraint List -->
+		
+
+        <!-- Foreign Key Discovery -->
+		
+
+    <!-- Indexes -->
+    
+
+	<!-- List off permissions -->
+	
+
+	<p>
+		<a href="#index">Index</a>
+    </p>
+
+        <hr>
+		<h2>View:
+			<a name="public.view.match-switch-histogram">match_switch_histogram</a>
+		</h2>
+        
+         <p>For each match, generates a histogram of how many times play has switched in games in that match.</p>
+        
+
+
+        <table width="100%" cellspacing="0" cellpadding="3">
+                <caption>match_switch_histogram Structure</caption>
+                <tr>
+                <th>F-Key</th>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Description</th>
+                </tr>
+            
+            <tr class="tr0">
+				<td>
+                
+                </td>
+            	<td>matchid</td>
+            	<td>integer</td>
+                <td><i>
+				
+
+				
+				
+				</i>
+				
+				</td>
+			 </tr>
+            
+            <tr class="tr1">
+				<td>
+                
+                </td>
+            	<td>agentid1</td>
+            	<td>integer</td>
+                <td><i>
+				
+
+				
+				
+				</i>
+				
+				</td>
+			 </tr>
+            
+            <tr class="tr0">
+				<td>
+                
+                </td>
+            	<td>switches</td>
+            	<td>bigint</td>
+                <td><i>
+				
+
+				
+				
+				</i>
+				
+				</td>
+			 </tr>
+            
+            <tr class="tr1">
+				<td>
+                
+                </td>
+            	<td>count</td>
+            	<td>bigint</td>
+                <td><i>
+				
+
+				
+				
+				</i>
+				
+				</td>
+			 </tr>
+            
+        </table>
+
+        <!-- Inherits -->
+		
+
+        <!-- Constraint List -->
+		
+
+        <!-- Foreign Key Discovery -->
+		
+
+    <!-- Indexes -->
+    
+
+	<!-- List off permissions -->
+	
+
+	<p>
+		<a href="#index">Index</a>
+    </p>
+
+        <hr>
+		<h2>View:
+			<a name="public.view.noise-access">noise_access</a>
+		</h2>
+        
+
+
+        <table width="100%" cellspacing="0" cellpadding="3">
+                <caption>noise_access Structure</caption>
+                <tr>
+                <th>F-Key</th>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Description</th>
+                </tr>
+            
+            <tr class="tr0">
+				<td>
+                
+                </td>
+            	<td>noiseid</td>
+            	<td>integer</td>
+                <td><i>
+				
+
+				
+				
+				</i>
+				
+				</td>
+			 </tr>
+            
+            <tr class="tr1">
+				<td>
+                
+                </td>
+            	<td>userid</td>
+            	<td>integer</td>
+                <td><i>
+				
+
+				
+				
+				</i>
+				
+				</td>
+			 </tr>
+            
+        </table>
+
+        <!-- Inherits -->
+		
+
+        <!-- Constraint List -->
+		
+
+        <!-- Foreign Key Discovery -->
+		
+
+    <!-- Indexes -->
+    
+
+	<!-- List off permissions -->
+	
+
+	<p>
+		<a href="#index">Index</a>
+    </p>
+
+        <hr>
+		<h2>View:
+			<a name="public.view.noise-sim-ballsleft-surface">noise_sim_ballsleft_surface</a>
+		</h2>
+        
+         <p>Used to create a surface plot of noiselevel vs. time vs. amount of balls left for single-agent noise-time experiments.</p>
+        
+
+
+        <table width="100%" cellspacing="0" cellpadding="3">
+                <caption>noise_sim_ballsleft_surface Structure</caption>
+                <tr>
+                <th>F-Key</th>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Description</th>
+                </tr>
+            
+            <tr class="tr0">
+				<td>
+                
+                </td>
+            	<td>matchid</td>
+            	<td>integer</td>
+                <td><i>
+				
+
+				
+				
+				</i>
+				
+				</td>
+			 </tr>
+            
+            <tr class="tr1">
+				<td>
+                
+                </td>
+            	<td>noise</td>
+            	<td>double precision</td>
+                <td><i>
+				
+
+				
+				
+				</i>
+				
+				</td>
+			 </tr>
+            
+            <tr class="tr0">
+				<td>
+                
+                </td>
+            	<td>sim_limit</td>
+            	<td>double precision</td>
+                <td><i>
+				
+
+				
+				
+				</i>
+				
+				</td>
+			 </tr>
+            
+            <tr class="tr1">
+				<td>
+                
+                </td>
+            	<td>end_reason</td>
+            	<td>smallint</td>
+                <td><i>
+				
+
+				
+				
+				</i>
+				
+				</td>
+			 </tr>
+            
+            <tr class="tr0">
+				<td>
+                
+                </td>
+            	<td>end_state</td>
+            	<td>integer</td>
+                <td><i>
+				
+
+				
+				
+				</i>
+				
+				</td>
+			 </tr>
+            
+            <tr class="tr1">
+				<td>
+                
+                </td>
+            	<td>balls_left</td>
+            	<td>bigint</td>
+                <td><i>
+				
+
+				
+				
+				</i>
+				
+				</td>
+			 </tr>
+            
+        </table>
+
+        <!-- Inherits -->
+		
+
+        <!-- Constraint List -->
+		
+
+        <!-- Foreign Key Discovery -->
+		
+
+    <!-- Indexes -->
+    
+
+	<!-- List off permissions -->
+	
+
+	<p>
+		<a href="#index">Index</a>
+    </p>
+
+        <hr>
+		<h2>View:
+			<a name="public.view.noise-sim-scatterplot">noise_sim_scatterplot</a>
+		</h2>
+        
+         <p>Used to create a scatter of noiselevel vs. time vs. wins off the break for single-agent noise-time experiments.</p>
+        
+
+
+        <table width="100%" cellspacing="0" cellpadding="3">
+                <caption>noise_sim_scatterplot Structure</caption>
+                <tr>
+                <th>F-Key</th>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Description</th>
+                </tr>
+            
+            <tr class="tr0">
+				<td>
+                
+                </td>
+            	<td>matchid</td>
+            	<td>integer</td>
+                <td><i>
+				
+
+				
+				
+				</i>
+				
+				</td>
+			 </tr>
+            
+            <tr class="tr1">
+				<td>
+                
+                </td>
+            	<td>noise</td>
+            	<td>double precision</td>
+                <td><i>
+				
+
+				
+				
+				</i>
+				
+				</td>
+			 </tr>
+            
+            <tr class="tr0">
+				<td>
+                
+                </td>
+            	<td>sim_limit</td>
+            	<td>double precision</td>
+                <td><i>
+				
+
+				
+				
+				</i>
+				
+				</td>
+			 </tr>
+            
+            <tr class="tr1">
+				<td>
+                
+                </td>
+            	<td>end_reason</td>
+            	<td>smallint</td>
+                <td><i>
+				
+
+				
+				
+				</i>
+				
+				</td>
+			 </tr>
+            
+        </table>
+
+        <!-- Inherits -->
+		
+
+        <!-- Constraint List -->
+		
+
+        <!-- Foreign Key Discovery -->
+		
+
+    <!-- Indexes -->
+    
+
+	<!-- List off permissions -->
+	
+
+	<p>
+		<a href="#index">Index</a>
+    </p>
+
+        <hr>
+		<h2>View:
+			<a name="public.view.noise-strings">noise_strings</a>
+		</h2>
+        
+         <p>Creates Noise::Factory-compatible string representation of noise entries.</p>
+        
+
+
+        <table width="100%" cellspacing="0" cellpadding="3">
+                <caption>noise_strings Structure</caption>
+                <tr>
+                <th>F-Key</th>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Description</th>
+                </tr>
+            
+            <tr class="tr0">
+				<td>
+                
+                </td>
+            	<td>noiseid</td>
+            	<td>integer</td>
+                <td><i>
+				
+
+				
+				
+				</i>
+				
+				</td>
+			 </tr>
+            
+            <tr class="tr1">
+				<td>
+                
+                </td>
+            	<td>string</td>
+            	<td>text</td>
+                <td><i>
+				
+
+				
+				
+				</i>
+				
+				</td>
+			 </tr>
+            
+        </table>
+
+        <!-- Inherits -->
+		
+
+        <!-- Constraint List -->
+		
+
+        <!-- Foreign Key Discovery -->
+		
+
+    <!-- Indexes -->
+    
+
+	<!-- List off permissions -->
+	
+
+	<p>
+		<a href="#index">Index</a>
+    </p>
+
+        <hr>
+		<h2>View:
+			<a name="public.view.shot-access">shot_access</a>
+		</h2>
+        
+
+
+        <table width="100%" cellspacing="0" cellpadding="3">
+                <caption>shot_access Structure</caption>
+                <tr>
+                <th>F-Key</th>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Description</th>
+                </tr>
+            
+            <tr class="tr0">
+				<td>
+                
+                </td>
+            	<td>shotid</td>
+            	<td>integer</td>
+                <td><i>
+				
+
+				
+				
+				</i>
+				
+				</td>
+			 </tr>
+            
+            <tr class="tr1">
+				<td>
+                
+                </td>
+            	<td>userid</td>
+            	<td>integer</td>
+                <td><i>
+				
+
+				
+				
+				</i>
+				
+				</td>
+			 </tr>
+            
+        </table>
+
+        <!-- Inherits -->
+		
+
+        <!-- Constraint List -->
+		
+
+        <!-- Foreign Key Discovery -->
+		
+
+    <!-- Indexes -->
+    
+
+	<!-- List off permissions -->
+	
+
+	<p>
+		<a href="#index">Index</a>
+    </p>
+
+        <hr>
+		<h2>View:
+			<a name="public.view.state-access">state_access</a>
+		</h2>
+        
+
+
+        <table width="100%" cellspacing="0" cellpadding="3">
+                <caption>state_access Structure</caption>
+                <tr>
+                <th>F-Key</th>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Description</th>
+                </tr>
+            
+            <tr class="tr0">
+				<td>
+                
+                </td>
+            	<td>stateid</td>
+            	<td>integer</td>
+                <td><i>
+				
+
+				
+				
+				</i>
+				
+				</td>
+			 </tr>
+            
+            <tr class="tr1">
+				<td>
+                
+                </td>
+            	<td>userid</td>
+            	<td>integer</td>
+                <td><i>
+				
+
+				
+				
+				</i>
+				
+				</td>
+			 </tr>
+            
+        </table>
+
+        <!-- Inherits -->
+		
+
+        <!-- Constraint List -->
+		
+
+        <!-- Foreign Key Discovery -->
+		
+
+    <!-- Indexes -->
+    
+
+	<!-- List off permissions -->
+	
+
+	<p>
+		<a href="#index">Index</a>
+    </p>
+
+        <hr>
+		<h2>View:
+			<a name="public.view.state-ball-counts">state_ball_counts</a>
+		</h2>
+        
+         <p>Returns the number of stripes and solids left on the table for each table state.</p>
+        
+
+
+        <table width="100%" cellspacing="0" cellpadding="3">
+                <caption>state_ball_counts Structure</caption>
+                <tr>
+                <th>F-Key</th>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Description</th>
+                </tr>
+            
+            <tr class="tr0">
+				<td>
+                
+                </td>
+            	<td>stateid</td>
+            	<td>integer</td>
+                <td><i>
+				
+
+				
+				
+				</i>
+				
+				</td>
+			 </tr>
+            
+            <tr class="tr1">
+				<td>
+                
+                </td>
+            	<td>solids</td>
+            	<td>bigint</td>
+                <td><i>
+				
+
+				
+				
+				</i>
+				
+				</td>
+			 </tr>
+            
+            <tr class="tr0">
+				<td>
+                
+                </td>
+            	<td>stripes</td>
+            	<td>bigint</td>
+                <td><i>
+				
+
+				
+				
+				</i>
+				
+				</td>
+			 </tr>
+            
+        </table>
+
+        <!-- Inherits -->
+		
+
+        <!-- Constraint List -->
+		
+
+        <!-- Foreign Key Discovery -->
+		
+
+    <!-- Indexes -->
+    
+
+	<!-- List off permissions -->
+	
+
+	<p>
+		<a href="#index">Index</a>
+    </p>
+
+
+	<!-- We've gone through the table structure, now lets take a look at user functions -->
+	
+		<hr>
+		<h2>Function:
+			<a href="#public.schema"><a name="public.function.add-game-to-match-start-state-integer-agentid-integer-matchid-integer">add_game_to_match(start_state integer, agentid integer, matchid integer)</a>
+		</h2>
+<h3>Returns: bigint</h3>
+<h3>Language: SQL</h3>
+        <p>Adds a new game to a match and creates a pending shot for that game. Caller must already create a racked state in the database.
+Returns the new gameid.</p>
+	
+		<hr>
+		<h2>Function:
+			<a href="#public.schema"><a name="public.function.add-game-to-match-special-start-state-integer-matchid-integer">add_game_to_match_special(start_state integer, matchid integer)</a>
+		</h2>
+<h3>Returns: bigint</h3>
+<h3>Language: SQL</h3>
+        <p>This function is only used for special noise/time experiments.</p>
+	
+		<hr>
+		<h2>Function:
+			<a href="#public.schema"><a name="public.function.add-to-cache-stateid-integer-gameid-integer">add_to_cache(stateid integer, gameid integer)</a>
+		</h2>
+<h3>Returns: void</h3>
+<h3>Language: SQL</h3>
+        
+	
+		<hr>
+		<h2>Function:
+			<a href="#public.schema"><a name="public.function.clean-orphaned-states">clean_orphaned_states()</a>
+		</h2>
+<h3>Returns: void</h3>
+<h3>Language: SQL</h3>
+        <p>Remove all states in the database that are not referenced by a game or a shot.</p>
+	
+		<hr>
+		<h2>Function:
+			<a href="#public.schema"><a name="public.function.cleanup">cleanup()</a>
+		</h2>
+<h3>Returns: void</h3>
+<h3>Language: SQL</h3>
+        <p>Perform maintenence tasks, removing empty matches and games.</p>
+	
+		<hr>
+		<h2>Function:
+			<a href="#public.schema"><a name="public.function.cleanup-logfiles">cleanup_logfiles()</a>
+		</h2>
+<h3>Returns: void</h3>
+<h3>Language: SQL</h3>
+        <p>Remove old uploaded log files.</p>
+	
+		<hr>
+		<h2>Function:
+			<a href="#public.schema"><a name="public.function.cleanup-pendingshots">cleanup_pendingshots()</a>
+		</h2>
+<h3>Returns: void</h3>
+<h3>Language: SQL</h3>
+        <p>Detect and remove pending shots where the agent is over an hour overdue and mark those as client crashes.</p>
+	
+		<hr>
+		<h2>Function:
+			<a href="#public.schema"><a name="public.function.concat-text">concat(text)</a>
+		</h2>
+<h3>Returns: text</h3>
+<h3>Language: INTERNAL</h3>
+        
+	
+		<hr>
+		<h2>Function:
+			<a href="#public.schema"><a name="public.function.get-next-agent-integer-integer">get_next_agent(integer, integer)</a>
+		</h2>
+<h3>Returns: integer</h3>
+<h3>Language: SQL</h3>
+        <p>Returns the ID of the agent that is next to shoot in given game and state.</p>
+	
+		<hr>
+		<h2>Function:
+			<a href="#public.schema"><a name="public.function.get-noise-integer-integer">get_noise(integer, integer)</a>
+		</h2>
+<h3>Returns: text</h3>
+<h3>Language: SQL</h3>
+        
+	
+		<hr>
+		<h2>Function:
+			<a href="#public.schema"><a name="public.function.get-tablestate-stateid-integer">get_tablestate(stateid integer)</a>
+		</h2>
+<h3>Returns: text</h3>
+<h3>Language: SQL</h3>
+        
+	
+		<hr>
+		<h2>Function:
+			<a href="#public.schema"><a name="public.function.populate-tournament-tourid-integer">populate_tournament(tourid integer)</a>
+		</h2>
+<h3>Returns: void</h3>
+<h3>Language: SQL</h3>
+        <p>Add matches corresponding to a given tournament.</p>
+	
+		<hr>
+		<h2>Function:
+			<a href="#public.schema"><a name="public.function.select-pending-match-agentids-integerARRAY">select_pending_match(agentids integer[])</a>
+		</h2>
+<h3>Returns: pending_match_info</h3>
+<h3>Language: SQL</h3>
+        <p>Returns the highest priority match (and its priority) from those requiring a new game from one of the agents passed as the parameter.</p>
+	
+		<hr>
+		<h2>Function:
+			<a href="#public.schema"><a name="public.function.select-pending-shot-integerARRAY">select_pending_shot(integer[])</a>
+		</h2>
+<h3>Returns: pending_shot_info</h3>
+<h3>Language: SQL</h3>
+        <p>Returns the highest priority game and state (and its priority) from those requiring a shot from one of the agents passed as the parameter.</p>
+	
+		<hr>
+		<h2>Function:
+			<a href="#public.schema"><a name="public.function.set-tablestate-tablestate-integer-stateid-text">set_tablestate(tablestate integer, stateid text)</a>
+		</h2>
+<h3>Returns: void</h3>
+<h3>Language: SQL</h3>
+        <p>Update ball positions of stateid using the encoded TableState object in the second parameter.
+State must not have any balls assigned in the tablestates table.</p>
+	
+
+
+<p class="w3ref">Generated by <a href="http://www.rbt.ca/autodoc/">PostgreSQL Autodoc</a></p>
+<p class="w3ref"><a href="http://validator.w3.org/check/referer">W3C HTML 4.01 Strict</a></p>
+</body></html>

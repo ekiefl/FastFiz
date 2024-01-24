@@ -1,0 +1,4 @@
+DATABASE=pool
+USER=pool
+PASSWORD=FastFiz
+HOST=127.0.0.1

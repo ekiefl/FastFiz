@@ -1,0 +1,19 @@
+include ../config.mk
+
+DOXYGEN_TARGET_DIR = html
+DOXYGEN_TARGET_FILE = $(DOXYGEN_TARGET_DIR)/index.html
+DOXYGEN_SYMLINK = ../../www/FastFiz
+DOXYGEN_SYMLINK_TARGET = $(CURDIR)/$(DOXYGEN_TARGET_DIR)
+
+doc: $(DOXYGEN_TARGET_FILE) $(DOXYGEN_SYMLINK)
+
+clean:
+	-rm -rf $(DOXYGEN_TARGET_DIR) *~
+
+$(DOXYGEN_TARGET_FILE): Doxyfile ../*.cpp ../*.h ../*.cc
+	doxygen
+
+$(DOXYGEN_SYMLINK):
+	ln -s $(DOXYGEN_SYMLINK_TARGET) $(DOXYGEN_SYMLINK)
+
+.PHONY: doc clean
